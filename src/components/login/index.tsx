@@ -41,7 +41,7 @@ const Login = () => {
         }}
       >
         <div className="w-full space-y-4">
-          <p className="lg:text-[0.9rem]">
+          <p className="text-[0.9rem] text-center lg:text-left">
             If you have a Rumble account, please enter your credentials.
           </p>
 
@@ -63,7 +63,7 @@ const Login = () => {
             size="md"
             radius={0}
           />
-          <div className="flex gap-3 justify-center items-center border-b p-4">
+          <div className="flex gap-3 justify-center items-center border-b py-2 lg:p-4">
             <Button value="Sign in" classes="bg-blue-500 text-white" />
             <a href="/" className="font-semi-bold">
               Forgot your password?
@@ -75,7 +75,7 @@ const Login = () => {
             <div className="flex gap-3 justify-center items-center">
               {loginOptions.map(({ icon, social }, id) => (
                 <button
-                  className={`flex gap-2 items-center first:bg-blue-500 even:border even:border-gray-300 last:bg-black text-white even:text-black py-1 px-3 rounded-full text-[0.83rem] capitalize`}
+                  className={`flex gap-2 items-center first:bg-blue-500 even:border even:border-gray-300 last:bg-black text-white even:text-black py-1 px-3 rounded-full text-[0.6rem] lg:text-[0.83rem] capitalize`}
                   key={id}
                 >
                   {icon}
@@ -84,7 +84,7 @@ const Login = () => {
               ))}
             </div>
           </div>
-          <div className="p-4 space-y-2  text-center">
+          <div className="lg:p-4 space-y-2  text-center">
             <p className="">Don't have a Rumble account yet?</p>
             <a href="/" className="font-bold">
               Create one now!

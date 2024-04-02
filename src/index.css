@@ -13,41 +13,48 @@
 .gridder-collapse {
   display: grid;
 
-  /* Method 1 */
+  /* Default layout for smaller screens */
   grid-template-areas:
     "nav nav"
-    "sidebar main";
+    "main main"; /* Remove sidebar from the grid */
 
-  /* Method 2 */
-  grid-template-columns: 100px 1fr;
-  grid-template-rows: 64px 1fr;
-}
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-template-rows: 64px 1fr; /* Header and main content */
 
-.mobile-gridder-collapse {
-  display: grid;
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    grid-template-areas:
+      "nav nav"
+      "sidebar main";
 
-  /* Method 1 */
-  grid-template-areas:
-    "nav nav"
-    "sidebar main";
-
-  /* Method 2 */
-  grid-template-columns: 0px 1fr;
-  grid-template-rows: 64px 1fr;
+    grid-template-columns: 100px 1fr; /* Sidebar and main content */
+    grid-template-rows: 64px 1fr; /* Header and remaining content */
+  }
 }
 
 .gridder-expand {
   display: grid;
 
-  /* Method 1 */
+  /* Default layout for smaller screens */
   grid-template-areas:
     "nav nav"
     "sidebar main";
 
-  /* Method 2 */
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: 60px 1fr;
+  grid-template-columns: 250px 1fr; /* Expanded sidebar and main content */
+  grid-template-rows: 60px 1fr; /* Header and remaining content */
+
+  /* Media query for smaller screens */
+  @media (max-width: 767px) {
+    grid-template-areas:
+      "nav nav"
+      "main main"; /* Remove sidebar from the grid */
+
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: 64px 1fr; /* Header and main content */
+  }
 }
+
+
 
 .gridder-collapse ::-webkit-scrollbar {
   width: 0em;
@@ -68,6 +75,7 @@
   align-self: start;
   top: 0;
   left: 0;
+  height: 100%;
 }
 
 .main-content {
@@ -76,3 +84,5 @@
 .main-nav.blue {
   background-color: blue;
 }
+
+

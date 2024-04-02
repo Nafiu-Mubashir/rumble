@@ -16,24 +16,29 @@ const NavLink = [
   {
     icon: <Home size="20" color="" className="stroke-black block mx-auto" />,
     name: "home",
+    link: "/"
   },
   {
     icon: (
       <FolderOpen size="20" color="" className="stroke-black block mx-auto" />
     ),
     name: "browse",
+    link: "/"
   },
   {
     icon: <Award size="20" color="" className="stroke-black block mx-auto" />,
     name: "editor picks",
+    link: "/"
   },
   {
     icon: <Diagram size="20" color="" className="stroke-black block mx-auto" />,
     name: "trending",
+    link: "/"
   },
   {
     icon: <Timer1 size="20" color="" className="stroke-black block mx-auto" />,
     name: "latest",
+    link: "/"
   },
 ];
 
@@ -76,7 +81,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
       <aside
         className={`${
           isOpen ? "w-[250px]" : "w-[100px]"
-        } z-10 lg:z-0 main-side bg-white border border-gray-300 text-black h-screen overflow-y-scroll`}
+        } lg:z-0 main-side bg-white border border-gray-300 text-black h-screen overflow-y-scroll`}
       >
         <div className="p-3 mt-20 m-auto space-y-4">
           <div className="border-b py-3">
@@ -85,14 +90,14 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                 isOpen ? "items-start space-y-2 font-bold" : "items-center"
               } flex flex-col gap-4`}
             >
-              {NavLink.map(({ icon, name }, id) => (
-                <div
+              {NavLink.map(({ icon, name, link }, id) => (
+                <a href={link}
                   key={id}
                   className={`${isOpen ? "flex-row gap-2" : "flex-col"} flex`}
                 >
                   {icon}
                   <p className="capitalize text-center text-[0.8rem]">{name}</p>
-                </div>
+                </a>
               ))}
             </div>
           </div>

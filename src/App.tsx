@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Sidebar from "./components/sidebar";
 import { useState } from "react";
+import Footer from "./components/footer";
 
 function Root() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,8 @@ function Root() {
     setIsOpen(!isOpen);
   };
   return (
-    <div
+   <>
+     <div
       className={` h-screen ${isOpen ? "gridder-expand" : "gridder-collapse"}`}
     >
       <Navbar toggleSidebar={toggleSidebar} />
@@ -20,6 +22,8 @@ function Root() {
         <Outlet />
       </div>
     </div>
+      <Footer />
+   </>
   );
 }
 
