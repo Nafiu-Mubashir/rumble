@@ -1,7 +1,7 @@
-import React from 'react'
 import Button from '../button'
 import { HambergerMenu } from "iconsax-react";
 import Login from '../login';
+import logo from '../../assets/rumble-full-logo.svg'
 
 interface NavbarProps {
     toggleSidebar: () => void;
@@ -17,14 +17,14 @@ const Navbar = ({toggleSidebar}: NavbarProps) => {
               className="stroke-black dark:stroke-black cursor-pointer"
               onClick={toggleSidebar}
             />
-            <h3 className="font-[700] text-2xl">LOGO</h3>
+            <img src={logo} alt="" />
           </div>
 
           <div className="relative lg:w-[35%]">
             <input
               type="search"
               id="default-search"
-              className="block bg-white w-full p-2 ps-3 text-sm text-gray-900 border outline-none border-gray-300 rounded-xl bg-gray-50 focus:ring-black focus:border-black "
+              className="block bg-white w-full p-2 ps-3 text-sm text-gray-900 border outline-none border-gray-300 rounded-xl  focus:ring-black focus:border-black "
               placeholder="Search"
               required
             />
@@ -50,7 +50,7 @@ const Navbar = ({toggleSidebar}: NavbarProps) => {
           <div className="flex gap-2 items-center">
             <Login />
             {/* <Link href={'/'}> */}
-              <Button classes="border-2 border-green-500 hover:bg-gray-100" value="Sign Up" />
+              <Button classes="border border-green-500 hover:bg-gray-100" value="Sign Up" />
             {/* </Link> */}
           </div>
         </div>
