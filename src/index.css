@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.gridder-collapse {
+  display: grid;
+
+  /* Method 1 */
+  grid-template-areas:
+    "nav nav"
+    "sidebar main";
+
+  /* Method 2 */
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 64px 1fr;
+}
+
+.mobile-gridder-collapse {
+  display: grid;
+
+  /* Method 1 */
+  grid-template-areas:
+    "nav nav"
+    "sidebar main";
+
+  /* Method 2 */
+  grid-template-columns: 0px 1fr;
+  grid-template-rows: 64px 1fr;
+}
+
+.gridder-expand {
+  display: grid;
+
+  /* Method 1 */
+  grid-template-areas:
+    "nav nav"
+    "sidebar main";
+
+  /* Method 2 */
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr;
+}
+
+.gridder-collapse ::-webkit-scrollbar {
+  width: 0em;
+  /* width: 10px; */
+}
+
+.main-nav {
+  grid-area: nav;
+  align-self: start;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+
+.main-side {
+  grid-area: sidebar;
+  position: fixed;
+  align-self: start;
+  top: 0;
+  left: 0;
+}
+
+.main-content {
+  grid-area: main;
+}
+.main-nav.blue {
+  background-color: blue;
+}
