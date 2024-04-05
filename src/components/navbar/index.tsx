@@ -10,17 +10,17 @@ const Navbar = ({toggleSidebar}: NavbarProps) => {
   return (
     <nav className="bg-white main-nav w-full z-10 p-2 text-black fixe border border-gray-300">
         <div className="flex justify-between items-center lg:w-[98%] mx-auto">
-          <div className="flex lg:gap-10 items-center">
+          <div className="flex gap-1 md:gap-5 lg:gap-10 items-center">
             <HambergerMenu
               size="32"
               color=""
               className="stroke-black dark:stroke-black cursor-pointer"
               onClick={toggleSidebar}
             />
-            <img src={logo} alt="" className='h-5 lg:h-full' />
+            <img src={logo} alt="" className='h-5 md:h-8 lg:h-full' />
           </div>
 
-          <div className="relative lg:w-[35%] hidden lg:block">
+          <div className="relative md:w-[40%] lg:w-[35%] hidden md:block lg:block">
             <input
               type="search"
               id="default-search"

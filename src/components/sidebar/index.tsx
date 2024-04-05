@@ -11,6 +11,7 @@ import {
 import news from "../../assets/news.jpeg";
 import user from "../../assets/user.png";
 import { RecordCircle } from "iconsax-react";
+// import { useThemeCtx } from "../../context/themeCtx";
 
 const NavLink = [
   {
@@ -23,22 +24,22 @@ const NavLink = [
       <FolderOpen size="20" color="" className="stroke-black block mx-auto" />
     ),
     name: "browse",
-    link: "/"
+    link: "/browse"
   },
   {
     icon: <Award size="20" color="" className="stroke-black block mx-auto" />,
     name: "editor picks",
-    link: "/"
+    link: "/editor_picks"
   },
   {
     icon: <Diagram size="20" color="" className="stroke-black block mx-auto" />,
     name: "trending",
-    link: "/"
+    link: "/trending"
   },
   {
     icon: <Timer1 size="20" color="" className="stroke-black block mx-auto" />,
     name: "latest",
-    link: "/"
+    link: "/latest"
   },
 ];
 
@@ -76,11 +77,12 @@ const themeList = [
 ];
 
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
+  // const { theme, setTheme } = useThemeCtx();
   return (
     <>
       <aside
         className={`${
-          isOpen ? "w-[250px]" : "w-[100px]"
+          isOpen ? "w-[250px] block" : "w-[100px] hidden lg:block"
         } lg:z-0 main-side bg-white border border-gray-300 text-black h-screen overflow-y-scroll`}
       >
         <div className="p-3 mt-20 m-auto space-y-4">
@@ -117,16 +119,16 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                 <div
                   className={`${
                     isOpen ? "justify-between" : "justify-center"
-                  } flex items-center`}
+                  } flex items-center cursor-pointer`}
                   key={id}
                 >
                   <div className="flex gap-1 items-center">
                     <img
                       src={image}
                       alt=""
-                      className="w-[2.5rem] h-[2.5rem] rounded-full border-2 border-red-500"
+                      className="w-[2.3rem] h-[2.3rem] rounded-full border-2 border-red-500"
                     />
-                    <p className={`${isOpen ? "block" : "hidden"} font-bold`}>
+                    <p className={`${isOpen ? "block" : "hidden"} font-semi-bold`}>
                       {name}
                     </p>
                   </div>
@@ -157,12 +159,17 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                 <div
                   className={`${
                     isOpen ? "items-start space-y-2 font-bold" : "items-center"
-                  } flex flex-col gap-4`}
+                  } flex flex-col gap-4 cursor-pointer`}
                   key={id}
+                  // onClick={() => {
+                  //   setTheme(theme === 'dark' ? 'light' : 'dark');
+                  // }}
                 >
                   <div className={`${isOpen ? "flex-row gap-2" : "flex-col items-center text-center"} flex`}>
-                    <div className="">{icon}</div>
-                    <p className={`font-bold`}>{value}</p>
+                    <div 
+                    // className={theme === 'dark' ? 'bg-white' : 'bg-black'}
+                    >{icon}</div>
+                    <p className={`font-semi-bold`}>{value}</p>
                   </div>
                 </div>
               ))}

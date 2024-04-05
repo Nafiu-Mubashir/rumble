@@ -10,12 +10,12 @@ const Category = () => {
           <img
             src={news}
             alt="news image"
-            className="w-[10rem] h-[15rem] rounded-lg"
+            className="w-[5rem] h-[7.5rem] lg:w-[10rem] lg:h-[15rem] rounded-lg"
           />
           <div className="">
-          <h4 className="font-[700] text-[1.5rem]">News</h4>
-          <p className="font-[600]">Your daily source of news from all over the world, all in one place!</p>
-          <p className="text-[0.813rem]">16.9k viewers</p>
+          <h4 className="font-[700] text-[.8rem] lg:text-[1.5rem]">News</h4>
+          <p className="font-[600] text-[.8rem] lg:text-[1rem]">Your daily source of news from all over the world, all in one place!</p>
+          <p className="text-[.8rem] lg:text-[0.813rem]">16.9k viewers</p>
           </div>
         </div>
       </div>
@@ -24,7 +24,8 @@ const Category = () => {
         defaultValue="live Streams"
         classNames={{
           panel: "p-4",
-          tabLabel: "font-[700] lg:text-[1.2rem]"
+          tabLabel: "font-[700] lg:text-[1.2rem]",
+          list: 'w-[100%] overflow-x-scroll',
         }}
       >
         <Tabs.List>

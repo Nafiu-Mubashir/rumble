@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import user from "../../../assets/user.png";
+import { SlideContext } from "../../../context/sidebarCtx";
 
 const CreatorCard = () => {
+  const { isOpen } = useContext(SlideContext);
   return (
-    <div className="w-[17.041rem] h-[9.875rem] bg-gray-200 py-6 rounded-lg">
+    <div className={`${isOpen ? "w-[16rem]" : "w-full md:w-[90%] lg:w-[17.041rem]"}  h-[9.875rem] bg-gray-200 py-6 rounded-lg"`}>
       <div className="w-[15.541rem] m-auto text-center">
         <img
           src={user}

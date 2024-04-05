@@ -2,14 +2,13 @@ import { Outlet } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/navbar";
 import Sidebar from "./components/sidebar";
-import { useState } from "react";
+import { useContext } from "react";
 import Footer from "./components/footer";
+import { SlideContext } from "./context/sidebarCtx";
 
 function Root() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+  const { toggleSidebar, isOpen } = useContext(SlideContext);
+
   return (
    <>
      <div
@@ -18,7 +17,7 @@ function Root() {
       <Navbar toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isOpen} />
       {/* <AnimatePresence */}
-      <div className="main-content bg-slate-100">
+      <div className="main-content bg-slate-100 ">
         <Outlet />
       </div>
     </div>

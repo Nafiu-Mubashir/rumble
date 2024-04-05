@@ -13,48 +13,28 @@
 .gridder-collapse {
   display: grid;
 
-  /* Default layout for smaller screens */
+  /* Method 1 */
   grid-template-areas:
     "nav nav"
-    "main main"; /* Remove sidebar from the grid */
+    "sidebar main";
 
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-template-rows: 64px 1fr; /* Header and main content */
-
-  /* Media query for larger screens */
-  @media (min-width: 768px) {
-    grid-template-areas:
-      "nav nav"
-      "sidebar main";
-
-    grid-template-columns: 100px 1fr; /* Sidebar and main content */
-    grid-template-rows: 64px 1fr; /* Header and remaining content */
-  }
+  /* Method 2 */
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 64px 1fr;
 }
 
 .gridder-expand {
   display: grid;
 
-  /* Default layout for smaller screens */
+  /* Method 1 */
   grid-template-areas:
     "nav nav"
     "sidebar main";
 
-  grid-template-columns: 250px 1fr; /* Expanded sidebar and main content */
-  grid-template-rows: 60px 1fr; /* Header and remaining content */
-
-  /* Media query for smaller screens */
-  @media (max-width: 767px) {
-    grid-template-areas:
-      "nav nav"
-      "main main"; /* Remove sidebar from the grid */
-
-    grid-template-columns: 1fr; /* Single column layout */
-    grid-template-rows: 64px 1fr; /* Header and main content */
-  }
+  /* Method 2 */
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr;
 }
-
-
 
 .gridder-collapse ::-webkit-scrollbar {
   width: 0em;
@@ -85,4 +65,15 @@
   background-color: blue;
 }
 
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .gridder-collapse {
+    grid-template-areas:
+      "nav nav"
+      "main main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 1fr;
+  }
 
+  
+}

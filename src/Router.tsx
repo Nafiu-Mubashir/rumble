@@ -3,6 +3,10 @@ import Home from "./pages/home";
 import Root from "./App";
 import Registration from "./pages/registration";
 import Category from "./pages/catgory";
+import Browse from "./pages/browse";
+import EditorPicks from "./pages/editorPicks";
+import Trending from "./pages/trending";
+import Latest from "./pages/latest";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +16,22 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "browse",
+        element: <Browse />,
+      },
+      {
+        path: "editor_picks",
+        element: <EditorPicks />,
+      },
+      {
+        path: "Trending",
+        element: <Trending />,
+      },
+      {
+        path: "latest",
+        element: <Latest />,
       },
       {
         path: "category/:id",
