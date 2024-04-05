@@ -28,7 +28,7 @@ const VideoCard = ({
   return (
     <div
       className={`${
-        isOpen ? "lg:w-[17rem]" : "w-full lg:w-[19rem] lg:h-[14.865rem] "
+        isOpen ? "lg:w-[17rem]" : "w-full lg:w-[19rem] lg:h-auto py-2 "
       } " px-2 group"`}
     >
       <div className="w-full cursor-pointer">

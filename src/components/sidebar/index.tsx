@@ -11,72 +11,76 @@ import {
 import news from "../../assets/news.jpeg";
 import user from "../../assets/user.png";
 import { RecordCircle } from "iconsax-react";
+import { Tooltip } from "@mantine/core";
 // import { useThemeCtx } from "../../context/themeCtx";
 
-const NavLink = [
-  {
-    icon: <Home size="20" color="" className="stroke-black block mx-auto" />,
-    name: "home",
-    link: "/"
-  },
-  {
-    icon: (
-      <FolderOpen size="20" color="" className="stroke-black block mx-auto" />
-    ),
-    name: "browse",
-    link: "/browse"
-  },
-  {
-    icon: <Award size="20" color="" className="stroke-black block mx-auto" />,
-    name: "editor picks",
-    link: "/editor_picks"
-  },
-  {
-    icon: <Diagram size="20" color="" className="stroke-black block mx-auto" />,
-    name: "trending",
-    link: "/trending"
-  },
-  {
-    icon: <Timer1 size="20" color="" className="stroke-black block mx-auto" />,
-    name: "latest",
-    link: "/latest"
-  },
-];
-
-const featured = [
-  {
-    image: user,
-    name: "Akademiks",
-    followers: "4.6k",
-  },
-  {
-    image: news,
-    name: "NEWSMAX",
-    followers: "2.58k",
-  },
-  {
-    image: user,
-    name: "Rekieta Law",
-    followers: "1.82k",
-  },
-];
-
-const themeList = [
-  {
-    value: "system default",
-    icon: <Monitor variant="Outline" size="20" />,
-  },
-  {
-    value: "dark",
-    icon: <Moon variant="Outline" size="20" />,
-  },
-  {
-    value: "light",
-    icon: <Sun1 variant="Outline" size="20" />,
-  },
-];
-
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
+  const NavLink = [
+    {
+      icon: <Home size="20" color="" className="stroke-black block mx-auto" />,
+      name: "home",
+      link: "/",
+    },
+    {
+      icon: (
+        <FolderOpen size="20" color="" className="stroke-black block mx-auto" />
+      ),
+      name: "browse",
+      link: "/browse",
+    },
+    {
+      icon: <Award size="20" color="" className="stroke-black block mx-auto" />,
+      name: "editor picks",
+      link: "/editor_picks",
+    },
+    {
+      icon: (
+        <Diagram size="20" color="" className="stroke-black block mx-auto" />
+      ),
+      name: "trending",
+      link: "/trending",
+    },
+    {
+      icon: (
+        <Timer1 size="20" color="" className="stroke-black block mx-auto" />
+      ),
+      name: "latest",
+      link: "/latest",
+    },
+  ];
+
+  const featured = [
+    {
+      image: user,
+      name: "Akademiks",
+      followers: "4.6k",
+    },
+    {
+      image: news,
+      name: "NEWSMAX",
+      followers: "2.58k",
+    },
+    {
+      image: user,
+      name: "Rekieta Law",
+      followers: "1.82k",
+    },
+  ];
+
+  const themeList = [
+    {
+      value: "system default",
+      icon: <Monitor variant="Outline" size="20" />,
+    },
+    {
+      value: "dark",
+      icon: <Moon variant="Outline" size="20" />,
+    },
+    {
+      value: "light",
+      icon: <Sun1 variant="Outline" size="20" />,
+    },
+  ];
   // const { theme, setTheme } = useThemeCtx();
   return (
     <>
@@ -85,7 +89,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
           isOpen ? "w-[250px] block" : "w-[100px] hidden lg:block"
         } lg:z-0 main-side bg-white border border-gray-300 text-black h-screen overflow-y-scroll`}
       >
-        <div className="p-3 mt-20 m-auto space-y-4">
+        <div className="p-3 mt-12 m-auto space-y-4">
           <div className="border-b py-3">
             <div
               className={`${
@@ -93,9 +97,10 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
               } flex flex-col gap-4`}
             >
               {NavLink.map(({ icon, name, link }, id) => (
-                <a href={link}
+                <a
+                  href={link}
                   key={id}
-                  className={`${isOpen ? "flex-row gap-2" : "flex-col"} flex`}
+                  className={`${isOpen ? "flex-row gap-4 hover:bg-gray-10 hover:rounded-l  " : "flex-col w-16 hover:bg-gray-100 hover:rounded-lg"} flex w-ful py-2`}
                 >
                   {icon}
                   <p className="capitalize text-center text-[0.8rem]">{name}</p>
@@ -123,12 +128,35 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                   key={id}
                 >
                   <div className="flex gap-1 items-center">
-                    <img
-                      src={image}
-                      alt=""
-                      className="w-[2.3rem] h-[2.3rem] rounded-full border-2 border-red-500"
-                    />
-                    <p className={`${isOpen ? "block" : "hidden"} font-semi-bold`}>
+                    <Tooltip
+                      arrowPosition="side"
+                      arrowOffset={5}
+                      arrowSize={4}
+                      label={
+                        <p
+                          className={`bg-gray-100 px-3 py-[0.1rem] text-black flex items-center rounded-full text-[.813rem] gap-2`}
+                        >
+                          <RecordCircle size={5} color="red" variant="Bold" />{" "}
+                          {followers}
+                        </p>
+                      }
+                      withArrow
+                      position="right-start"
+                      offset={{ mainAxis: 0, crossAxis: 0 }}
+                      classNames={{
+                        tooltip: `${isOpen ? "hidden" : "block"} !bg-white !rounded-xl`
+                      }}
+                    >
+                      {/* <Button>Button with tooltip</Button> */}
+                      <img
+                        src={image}
+                        alt=""
+                        className="w-[2.3rem] h-[2.3rem] rounded-full border-2 border-red-500"
+                      />
+                    </Tooltip>
+                    <p
+                      className={`${isOpen ? "block" : "hidden"} font-semibold`}
+                    >
                       {name}
                     </p>
                   </div>
@@ -165,10 +193,18 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                   //   setTheme(theme === 'dark' ? 'light' : 'dark');
                   // }}
                 >
-                  <div className={`${isOpen ? "flex-row gap-2" : "flex-col items-center text-center"} flex`}>
-                    <div 
+                  <div
+                    className={`${
+                      isOpen
+                        ? "flex-row gap-2"
+                        : "flex-col items-center text-center"
+                    } flex`}
+                  >
+                    <div
                     // className={theme === 'dark' ? 'bg-white' : 'bg-black'}
-                    >{icon}</div>
+                    >
+                      {icon}
+                    </div>
                     <p className={`font-semi-bold`}>{value}</p>
                   </div>
                 </div>

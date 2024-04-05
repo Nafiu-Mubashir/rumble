@@ -4,6 +4,7 @@ import CategoryCard from "../../components/card/categoryCard";
 import VideoCard from "../../components/card/videoCard";
 import { useContext } from "react";
 import { SlideContext } from "../../context/sidebarCtx";
+import { Divider } from "@mantine/core";
 
 const Home = () => {
   const { isOpen } = useContext(SlideContext);
@@ -24,7 +25,7 @@ const Home = () => {
         />
       </div>
       <div className="relative inline-block p-4 w-full mt-10">
-        <div className="lg:p-3">
+        <div className="lg:p-3 space-y-6">
           <div>
             <div className="flex justify-between items-center lg:mb-5">
               <h3 className="font-bold">Barstool Sport</h3>
@@ -34,13 +35,14 @@ const Home = () => {
               />
             </div>
 
-            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4 py-3 lg:h-[50vh] border-b">
+            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
               <VideoCard />
               <VideoCard />
               <VideoCard />
               <VideoCard />
             </div>
           </div>
+          <Divider my="md" />
 
           <div>
             <div className="flex justify-between items-center mb-2">
@@ -53,7 +55,7 @@ const Home = () => {
             <div
               className={`${
                 isOpen ? "gap-2" : "gap-4"
-              } "mb-4 grid grid-cols-9 overflow-auto lg:overflow-0 py-4 border-b"`}
+              } "grid grid-cols-9 overflow-auto lg:overflow-0 py-"`}
             >
               <CategoryCard />
               <CategoryCard />
@@ -66,6 +68,7 @@ const Home = () => {
               <CategoryCard />
             </div>
           </div>
+          <Divider my="md" />
 
           <div>
             <div className="flex justify-between items-center mb-4">
@@ -76,13 +79,14 @@ const Home = () => {
               />
             </div>
 
-            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4 py-3 lg:h-[50vh] border-b">
+            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
               <VideoCard status="live" />
               <VideoCard status="live" />
               <VideoCard status="live" />
               <VideoCard status="live" />
             </div>
           </div>
+          <Divider my="md" />
 
           <div>
             <div className="flex justify-between items-center mb-2">
@@ -93,13 +97,14 @@ const Home = () => {
               />
             </div>
 
-            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4 py-3 lg:h-[35vh] border-b">
+            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
               <CreatorCard />
               <CreatorCard />
               <CreatorCard />
               <CreatorCard />
             </div>
           </div>
+          <Divider my="md" />
 
           <div className="">
             <div className="flex justify-between items-center mb-2">
@@ -110,15 +115,16 @@ const Home = () => {
               />
             </div>
 
-            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4 py- lg:h-[35vh border-b">
+            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
               <VideoCard playlist="playlist" />
               <VideoCard playlist="playlist" />
               <VideoCard playlist="playlist" />
               <VideoCard playlist="playlist" />
             </div>
           </div>
+          <Divider my="md" />
 
-          <div className="mt-[100px]">
+          <div className="">
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-bold">Upcoming</h3>
               <Button
@@ -127,13 +133,14 @@ const Home = () => {
               />
             </div>
 
-            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4 py-3 lg:h-[35vh] border-b">
+            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
               <VideoCard status="upcoming" />
               <VideoCard status="upcoming" />
               <VideoCard status="upcoming" />
               <VideoCard status="upcoming" />
             </div>
           </div>
+          <Divider my="md" />
         </div>
       </div>
     </div>
