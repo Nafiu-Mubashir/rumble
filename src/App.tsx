@@ -19,9 +19,9 @@ function Root() {
       {/* <AnimatePresence */}
       <div className="main-content bg-slate-100 ">
         <Outlet />
+      <Footer />
       </div>
     </div>
-      <Footer />
    </>
   );
 }

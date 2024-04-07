@@ -3,11 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./Router";
+import '@mantine/core/styles.css';
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { SlideProvider } from "./context/sidebarCtx";
 import { ThemeProvider,  } from "./context/themeCtx";
-// import "@mantine/carousel/styles.css";
+import '@mantine/carousel/styles.css';
 
 const Base = () => {
   // const { theme } = useThemeCtx();

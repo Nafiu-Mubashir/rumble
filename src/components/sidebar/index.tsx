@@ -17,32 +17,32 @@ import { Tooltip } from "@mantine/core";
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const NavLink = [
     {
-      icon: <Home size="20" color="" className="stroke-black block mx-auto" />,
+      icon: <Home size="18" color="" variant="Bold" className="stroke-black block mx-auto" />,
       name: "home",
       link: "/",
     },
     {
       icon: (
-        <FolderOpen size="20" color="" className="stroke-black block mx-auto" />
+        <FolderOpen size="18" color="" variant="Bold" className="stroke-black block mx-auto" />
       ),
       name: "browse",
       link: "/browse",
     },
     {
-      icon: <Award size="20" color="" className="stroke-black block mx-auto" />,
+      icon: <Award size="18" color="" variant="Bold" className="stroke-black block mx-auto" />,
       name: "editor picks",
       link: "/editor_picks",
     },
     {
       icon: (
-        <Diagram size="20" color="" className="stroke-black block mx-auto" />
+        <Diagram size="18" color="" variant="Bold" className="stroke-black block mx-auto" />
       ),
       name: "trending",
       link: "/trending",
     },
     {
       icon: (
-        <Timer1 size="20" color="" className="stroke-black block mx-auto" />
+        <Timer1 size="18" color="" variant="Bold" className="stroke-black block mx-auto" />
       ),
       name: "latest",
       link: "/latest",
@@ -151,7 +151,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                       <img
                         src={image}
                         alt=""
-                        className="w-[2.3rem] h-[2.3rem] rounded-full border-2 border-red-500"
+                        className="w-[2rem] h-[2rem] rounded-full border-2 border-red-500"
                       />
                     </Tooltip>
                     <p
@@ -197,7 +197,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                     className={`${
                       isOpen
                         ? "flex-row gap-2"
-                        : "flex-col items-center text-center"
+                        : "flex-col items-center text-center w-16"
                     } flex`}
                   >
                     <div
@@ -205,7 +205,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                     >
                       {icon}
                     </div>
-                    <p className={`font-semi-bold`}>{value}</p>
+                    <p className={`font-semi-bold text-[0.7rem]`}>{value}</p>
                   </div>
                 </div>
               ))}

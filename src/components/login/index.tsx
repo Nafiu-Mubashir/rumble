@@ -96,7 +96,7 @@ const Login = () => {
       <Button
         onClick={open}
         value="Sign in"
-        classes="border-0 hover:bg-gray-100 outline-none"
+        classes="border-0 lg:py-2 hover:bg-gray-100 outline-none"
       />
     </>
   );
