@@ -1,9 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../button";
-import { HambergerMenu } from "iconsax-react";
+import {
+  // Brodcast,
+  // Diagram,
+  HambergerMenu,
+  // Logout,
+  // Profile,
+  // Security,
+  // Setting2,
+  // Video,
+} from "iconsax-react";
 import Login from "../login";
 import logo from "../../assets/rumble-full-logo.svg";
 import MobileSidebar from "../sidebar/mobileSidebar";
+// import { Avatar, Menu } from "@mantine/core";
 
 interface NavbarProps {
   toggleSidebar: () => void;
@@ -24,9 +34,9 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
         }
       };
 
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
       return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
+        document.removeEventListener("mousedown", handleClickOutside);
       };
     }, [ref]);
   };
@@ -35,7 +45,10 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
   useOutsideAlerter(wrapperRef);
 
   return (
-    <nav className="bg-white main-nav w-full z-10 p-2 text-black fixed border border-gray-300" ref={wrapperRef}>
+    <nav
+      className="bg-white main-nav w-full z-10 p-2 text-black fixed border border-gray-300"
+      ref={wrapperRef}
+    >
       <div className="flex justify-between items-center lg:w-[98%] mx-auto">
         <div className="flex gap-1 md:gap-5 lg:gap-10 items-center">
           <MobileSidebar />
@@ -48,7 +61,13 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           <img src={logo} alt="" className="h-5 md:h-8 lg:h-full" />
         </div>
 
-        <div className={input ? "absolute block left-0 right-0 md:w-[40%] lg:w-[35%]" : "relative md:w-[40%] lg:w-[35%] hidden md:block lg:block"}>
+        <div
+          className={
+            input
+              ? "absolute block left-0 right-0 md:w-[40%] lg:w-[35%]"
+              : "relative md:w-[40%] lg:w-[35%] hidden md:block lg:block"
+          }
+        >
           <input
             type="search"
             id="default-search"
@@ -95,9 +114,49 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
         <div className="flex gap-2 items-center">
           <Login />
           <a href="/registration">
-            <Button classes="border border-green-500 lg:py-2 hover:bg-gray-100" value="Sign Up" />
+            <Button
+              classes="border border-green-500 lg:py-2 hover:bg-gray-100"
+              value="Sign Up"
+            />
           </a>
         </div>
+
+        {/* <Menu>
+          <Menu.Target>
+            <Avatar
+              variant="gray"
+              radius="xl"
+              src=""
+              className="cursor-pointer"
+            />
+          </Menu.Target>
+
+          <Menu.Dropdown>
+            <Menu.Item leftSection={<Profile size="20" color="black" />}>
+              Account Overview
+            </Menu.Item>
+            <Menu.Item
+              leftSection={<Diagram size="20" color="black" className="" />}
+            >
+              Stats & Earnings
+            </Menu.Item>
+            <Menu.Item leftSection={<Video size="20" color="black" />}>
+              My Content
+            </Menu.Item>
+            <Menu.Item leftSection={<Security size="20" color="black" />}>
+              My Channels
+            </Menu.Item>
+            <Menu.Item leftSection={<Brodcast size="20" color="black" />}>
+              Live Streaming
+            </Menu.Item>
+            <Menu.Item leftSection={<Setting2 size="20" color="black" />}>
+              Account Option
+            </Menu.Item>
+            <Menu.Item leftSection={<Logout size="20" color="black" />}>
+              Sign Out
+            </Menu.Item>
+          </Menu.Dropdown>
+        </Menu> */}
       </div>
     </nav>
   );

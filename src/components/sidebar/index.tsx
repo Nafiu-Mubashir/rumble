@@ -2,7 +2,7 @@ import {
   Award,
   Diagram,
   FolderOpen,
-  Home,
+  House2,
   Monitor,
   Moon,
   Sun1,
@@ -17,7 +17,7 @@ import { Tooltip } from "@mantine/core";
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const NavLink = [
     {
-      icon: <Home size="18" color="" variant="Bold" className="stroke-black block mx-auto" />,
+      icon: <House2 size="18" color="" variant="Bold" className="stroke-black block mx-auto"/>,
       name: "home",
       link: "/",
     },

@@ -1,6 +1,6 @@
 import { useDisclosure } from "@mantine/hooks";
 import { Drawer } from "@mantine/core";
-import { Award, Diagram, FolderOpen, HambergerMenu, Home, Monitor, Moon, RecordCircle, Sun1, Timer1 } from "iconsax-react";
+import { Award, Diagram, FolderOpen, HambergerMenu, House2, Monitor, Moon, RecordCircle, Sun1, Timer1 } from "iconsax-react";
 import logo from '../../../assets/rumble-full-logo.svg';
 import news from "../../../assets/news.jpeg";
 import user from "../../../assets/user.png";
@@ -9,7 +9,7 @@ const MobileSidebar = () => {
   const [opened, { open, close }] = useDisclosure(false);
   const NavLink = [
     {
-      icon: <Home size="20" color="" className="stroke-black block mx-auto" />,
+      icon: <House2 size="18" color="" variant="Bold" className="stroke-black block mx-auto"/>,
       name: "home",
       link: "/"
     },
