@@ -115,7 +115,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           <Login />
           <a href="/registration">
             <Button
-              classes="border border-green-500 lg:py-2 hover:bg-gray-100"
+              classes="border border-rumble-green lg:py-2 hover:bg-gray-100"
               value="Sign Up"
             />
           </a>

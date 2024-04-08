@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="container m-auto">
       <div className="fixed container bg-white top-[3.1rem] md:top-[3.5rem] lg:top-[3.5rem] w-full h-[3.75rem] z-10 flex items-center gap-2 px-2">
-       <TabPane />
+        <TabPane />
       </div>
       <div className="relative inline-block p-4 w-full mt-10">
         <div className="lg:p-3 space-y-6">
@@ -21,7 +21,7 @@ const Home = () => {
               <h3 className="font-bold">Barstool Sport</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -34,7 +34,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -44,7 +44,7 @@ const Home = () => {
               <h3 className="font-bold">Top Live Categories</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
             <div
@@ -57,7 +57,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -67,7 +67,7 @@ const Home = () => {
               <h3 className="font-bold">Picks</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -78,7 +78,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -88,7 +88,7 @@ const Home = () => {
               <h3 className="font-bold">Recommended Creators</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -99,7 +99,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -109,7 +109,7 @@ const Home = () => {
               <h3 className="font-bold">Gaming</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -120,7 +120,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -130,7 +130,7 @@ const Home = () => {
               <h3 className="font-bold">Live</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -141,7 +141,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -151,7 +151,7 @@ const Home = () => {
               <h3 className="font-bold">Featured Playlist</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -162,7 +162,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -172,7 +172,7 @@ const Home = () => {
               <h3 className="font-bold">Sports</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -183,7 +183,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -193,7 +193,7 @@ const Home = () => {
               <h3 className="font-bold">Viral</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -204,7 +204,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -214,7 +214,7 @@ const Home = () => {
               <h3 className="font-bold">Power Slap</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -225,7 +225,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -235,7 +235,7 @@ const Home = () => {
               <h3 className="font-bold">Podcast</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -246,7 +246,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -256,7 +256,7 @@ const Home = () => {
               <h3 className="font-bold">Finance</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -267,7 +267,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -277,18 +277,18 @@ const Home = () => {
               <h3 className="font-bold">Leaderboard</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
             <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-              <VideoCard status="" />
-              <VideoCard status="" />
+              <VideoCard leaderboarder="leaderboard" />
+              <VideoCard leaderboarder="leaderboard" />
             </div>
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -298,7 +298,7 @@ const Home = () => {
               <h3 className="font-bold">Vlogs</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -309,7 +309,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -319,7 +319,7 @@ const Home = () => {
               <h3 className="font-bold">News</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -330,7 +330,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -340,7 +340,7 @@ const Home = () => {
               <h3 className="font-bold">Science</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -351,7 +351,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -361,7 +361,7 @@ const Home = () => {
               <h3 className="font-bold">Music</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -372,7 +372,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -382,7 +382,7 @@ const Home = () => {
               <h3 className="font-bold">Entertainment</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -393,7 +393,7 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
@@ -403,7 +403,7 @@ const Home = () => {
               <h3 className="font-bold">Cooking</h3>
               <Button
                 value="View all"
-                classes="hover:bg-green-400 border border-green-200 py-1 md:py-1 lg:py-2 hover:bg-green-400 hidden md:block lg:block"
+                classes="hover:bg-rumble-green-dark border border-rumble-green py-1 md:py-1 lg:py-2 hidden md:block lg:block"
               />
             </div>
 
@@ -414,11 +414,10 @@ const Home = () => {
 
             <Button
               value="View all"
-              classes="w-full block md:hidden lg:hidden hover:bg-green-400 border border-green-200 py-2 md:py-2 block mx-auto mt-3"
+              classes="w-full block md:hidden lg:hidden hover:bg-rumble-green-dark border border-rumble-green py-2 md:py-2 block mx-auto mt-3"
             />
           </div>
           <Divider my="md" />
-
         </div>
       </div>
     </div>

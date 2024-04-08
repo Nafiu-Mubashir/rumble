@@ -5,7 +5,12 @@ export default {
     './src/**/*.{js,jsx,ts,tsx,html}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'rumble-green': '#74CC1D',
+        'rumble-green-dark': '#77b23b'
+      }
+    },
   },
   plugins: [],
 }

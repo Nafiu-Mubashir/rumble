@@ -7,6 +7,7 @@ import Browse from "./pages/browse";
 import EditorPicks from "./pages/editorPicks";
 import Trending from "./pages/trending";
 import Latest from "./pages/latest";
+import SingleVideos from "./pages/singleVideo";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ export const router = createBrowserRouter([
         element: <Browse />,
       },
       {
-        path: "editor_picks",
+        path: "editor-picks",
         element: <EditorPicks />,
       },
       {
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: "category/:id",
         element: <Category />,
+      },
+      {
+        path: "single-video",
+        element: <SingleVideos />,
       },
       {
         path: "registration",

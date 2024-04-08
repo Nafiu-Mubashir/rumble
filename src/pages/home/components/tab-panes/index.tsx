@@ -80,41 +80,41 @@ const TabPane = () => {
       name: "Podcast",
     },
     {
-        link: "/",
-        name: "UFC",
-      },
-      {
-        link: "/",
-        name: "Finance",
-      },
-      {
-        link: "/",
-        name: "leaderboard",
-      },
-      {
-        link: "/",
-        name: "vlogs",
-      },
-      {
-        link: "/",
-        name: "news",
-      },
-      {
-        link: "/",
-        name: "science",
-      },
-      {
-        link: "/",
-        name: "music",
-      },
-      {
-        link: "/",
-        name: "entertainment",
-      },
-      {
-        link: "/",
-        name: "cooking",
-      },
+      link: "/",
+      name: "UFC",
+    },
+    {
+      link: "/",
+      name: "Finance",
+    },
+    {
+      link: "/",
+      name: "leaderboard",
+    },
+    {
+      link: "/",
+      name: "vlogs",
+    },
+    {
+      link: "/",
+      name: "news",
+    },
+    {
+      link: "/",
+      name: "science",
+    },
+    {
+      link: "/",
+      name: "music",
+    },
+    {
+      link: "/",
+      name: "entertainment",
+    },
+    {
+      link: "/",
+      name: "cooking",
+    },
   ];
   return (
     <div>

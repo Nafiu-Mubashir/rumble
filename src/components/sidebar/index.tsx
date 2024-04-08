@@ -17,32 +17,61 @@ import { Tooltip } from "@mantine/core";
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const NavLink = [
     {
-      icon: <House2 size="18" color="" variant="Bold" className="stroke-black block mx-auto"/>,
+      icon: (
+        <House2
+          size="18"
+          color=""
+          variant="Bold"
+          className="stroke-black block mx-auto"
+        />
+      ),
       name: "home",
       link: "/",
     },
     {
       icon: (
-        <FolderOpen size="18" color="" variant="Bold" className="stroke-black block mx-auto" />
+        <FolderOpen
+          size="18"
+          color=""
+          variant="Bold"
+          className="stroke-black block mx-auto"
+        />
       ),
       name: "browse",
       link: "/browse",
     },
     {
-      icon: <Award size="18" color="" variant="Bold" className="stroke-black block mx-auto" />,
+      icon: (
+        <Award
+          size="18"
+          color=""
+          variant="Bold"
+          className="stroke-black block mx-auto"
+        />
+      ),
       name: "editor picks",
       link: "/editor_picks",
     },
     {
       icon: (
-        <Diagram size="18" color="" variant="Bold" className="stroke-black block mx-auto" />
+        <Diagram
+          size="18"
+          color=""
+          variant="Bold"
+          className="stroke-black block mx-auto"
+        />
       ),
       name: "trending",
       link: "/trending",
     },
     {
       icon: (
-        <Timer1 size="18" color="" variant="Bold" className="stroke-black block mx-auto" />
+        <Timer1
+          size="18"
+          color=""
+          variant="Bold"
+          className="stroke-black block mx-auto"
+        />
       ),
       name: "latest",
       link: "/latest",
@@ -86,8 +115,8 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
     <>
       <aside
         className={`${
-          isOpen ? "w-[250px] block" : "w-[100px] hidden lg:block"
-        } lg:z-0 main-side bg-white border border-gray-300 text-black h-screen overflow-y-scroll`}
+          isOpen ? "w-[250px] block" : "w-[90px] hidden lg:block"
+        } lg:z-0 main-side bg-white border border-gray-300 text-black h-screen overflow-y-scroll `}
       >
         <div className="p-3 mt-12 m-auto space-y-4">
           <div className="border-b py-3">
@@ -100,7 +129,11 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                 <a
                   href={link}
                   key={id}
-                  className={`${isOpen ? "flex-row gap-4 hover:bg-gray-10 hover:rounded-l  " : "flex-col w-16 hover:bg-gray-100 hover:rounded-lg"} flex w-ful py-2`}
+                  className={`${
+                    isOpen
+                      ? "flex-row gap-4 hover:bg-gray-10 hover:rounded-l  "
+                      : "flex-col w-16 hover:bg-gray-100 hover:rounded-lg"
+                  } flex w-ful py-2`}
                 >
                   {icon}
                   <p className="capitalize text-center text-[0.8rem]">{name}</p>
@@ -144,7 +177,9 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                       position="right-start"
                       offset={{ mainAxis: 0, crossAxis: 0 }}
                       classNames={{
-                        tooltip: `${isOpen ? "hidden" : "block"} !bg-white !rounded-xl`
+                        tooltip: `${
+                          isOpen ? "hidden" : "block"
+                        } !bg-white !rounded-xl`,
                       }}
                     >
                       {/* <Button>Button with tooltip</Button> */}

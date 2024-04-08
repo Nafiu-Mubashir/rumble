@@ -10,19 +10,21 @@ function Root() {
   const { toggleSidebar, isOpen } = useContext(SlideContext);
 
   return (
-   <>
-     <div
-      className={` h-screen ${isOpen ? "gridder-expand" : "gridder-collapse"}`}
-    >
-      <Navbar toggleSidebar={toggleSidebar} />
-      <Sidebar isOpen={isOpen} />
-      {/* <AnimatePresence */}
-      <div className="main-content bg-slate-100 ">
-        <Outlet />
-      <Footer />
+    <>
+      <div
+        className={` h-screen ${
+          isOpen ? "gridder-expand" : "gridder-collapse"
+        }`}
+      >
+        <Navbar toggleSidebar={toggleSidebar} />
+        <Sidebar isOpen={isOpen} />
+        {/* <AnimatePresence */}
+        <div className="main-content bg-slate-100 mt-[-8px]">
+          <Outlet />
+          <Footer />
+        </div>
       </div>
-    </div>
-   </>
+    </>
   );
 }
 
