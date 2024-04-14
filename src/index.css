@@ -21,6 +21,7 @@
   /* Method 2 */
   grid-template-columns: 90px 1fr;
   grid-template-rows: 64px 1fr;
+  transition: 1s;
 }
 
 .gridder-expand {
@@ -34,6 +35,7 @@
   /* Method 2 */
   grid-template-columns: 250px 1fr;
   grid-template-rows: 60px 1fr;
+  transition: 1s;
 }
 
 .gridder-collapse ::-webkit-scrollbar {
@@ -56,11 +58,16 @@
   top: 0;
   left: 0;
   height: 100%;
-  
+  transition: 1s;
+}
+
+.main-side div a {
+  transition: 1s;
 }
 
 .main-content {
   grid-area: main;
+  transition: 1s;
 }
 .main-nav.blue {
   background-color: blue;
