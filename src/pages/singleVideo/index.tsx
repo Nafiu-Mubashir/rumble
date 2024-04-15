@@ -2,11 +2,14 @@ import { Like1, Dislike, Messages2, CodeCircle, DirectSend } from "iconsax-react
 import user from "../../assets/user.png";
 import { Menu } from "@mantine/core";
 import RelatedVideo from "../../components/card/relatedVideos";
+import { useContext } from "react";
+import { SlideContext } from "../../context/sidebarCtx";
 
 const SingleVideos = () => {
+  const { isOpen } = useContext(SlideContext);
   return (
-    <div className="flex flex-col md:flex-col lg:flex-row min-h-screen">
-      <div className="w-full md:w-full lg:w-[80%]">
+    <div className="flex flex-col md:flex-col lg:flex-row gap-3 min-h-screen">
+      <div className={`${isOpen ? 'w-[] border' : 'w-[]'} dark:text-white`}>
         <video
           className="aspect-ratio w-full h-full md:h-[60vh] lg:h-[70vh] bg-black"
           autoPlay
@@ -20,11 +23,11 @@ const SingleVideos = () => {
           />
         </video>
         <div className="p-3">
-          <h3 className="font-bold lg:text-[1.5rem] mb-3">
+          <h3 className="font-bold lg:text-[1.5rem] mb-3 dark:text-white">
             Barstool Live from Barstool Scottsdale | April 6th, 2024
           </h3>
-          <div className="flex flex-col md:flex-row lg:flex-row justify-between gap-5 lg:items-center py-3">
-            <div className="flex flex-col md:flex-row lg:flex-row gap-4 justify-between lg:w-1/3">
+          <div className="flex flex-col md:flex-row lg:flex-row justify-between gap-2 lg:items-center py-3">
+            <div className="flex flex-col md:flex-row lg:flex-row gap-4 justify-between">
               <div className="flex items-center gap-3 h-[36.39px]">
                 <img
                   src={user}
@@ -58,26 +61,26 @@ const SingleVideos = () => {
                 Follow
               </button>
             </div>
-            <div className="flex gap-2 lg:gap-3 overflow-y-auto">
+            <div className="flex gap-2 lg:gap-2 overflow-y-auto md:overflow-none lg:overflow">
               <div className="flex gap-1 border-b-4 rounded-full border-rumble-green">
-                <button className="flex gap-2 items-center font-semibold py-1 px-4 bg-gray-300 rounded-l-full mb-[0.13rem]">
-                  <Like1 size="20" color="black" /> 2
+                <button className="flex text-[0.8rem] gap-2 items-center font-semibold py-1 px-4 bg-gray-300 rounded-l-full mb-[0.13rem]">
+                  <Like1 size="16" color="black" /> 2
                 </button>
-                <button className="flex gap-2 items-center font-semibold py-1 px-4 bg-gray-300 rounded-r-full mb-[0.13rem]">
-                  <Dislike size="20" color="black" /> 0
+                <button className="flex text-[0.8rem] gap-2 items-center font-semibold py-1 px-4 bg-gray-300 rounded-r-full mb-[0.13rem]">
+                  <Dislike size="16" color="black" /> 0
                 </button>
               </div>
-              <button className="flex gap-1 items-center font-semibold capitalize py-1 px-4 bg-gray-300 rounded-full">
-                <Messages2 size="20" color="black" /> comment
+              <button className="flex text-[0.8rem] gap-1 items-center font-semibold capitalize py-1 px-4 bg-gray-300 rounded-full">
+                <Messages2 size="16" color="black" /> comment
               </button>
               <button className="font-semibold capitalize py-1 px-4 md:hidden lg:block bg-gray-300 rounded-full">
-                <p className="flex gap-1 items-center">
-                  <DirectSend size="20" color="black"/> share
+                <p className="flex text-[0.8rem] gap-1 items-center">
+                  <DirectSend size="16" color="black"/> share
                 </p>
               </button>
               <button className="font-semibold capitalize py-1 px-4 md:hidden lg:block bg-gray-300 rounded-full">
-                <p className="flex gap-1 items-center">
-                  <CodeCircle size="20" color="black"/> embed
+                <p className="flex text-[0.8rem] gap-1 items-center">
+                  <CodeCircle size="16" color="black"/> embed
                 </p>
               </button>
 
@@ -117,7 +120,7 @@ const SingleVideos = () => {
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-[30%] p-2">
+      <div className={`"w-full p-2 dark:border dark:border-gray-700"`}>
         <RelatedVideo />
       </div>
     </div>

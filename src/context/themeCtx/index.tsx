@@ -5,7 +5,7 @@ interface ThemeInterface {
   setTheme: (theme: Theme) => void;
 }
 
-type Theme = 'dark' | 'light';
+type Theme = 'dark' | 'light' | 'system';
 const ThemeContext = createContext<ThemeInterface>({} as ThemeInterface);
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {

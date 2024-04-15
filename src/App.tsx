@@ -19,7 +19,7 @@ function Root() {
         <Navbar toggleSidebar={toggleSidebar} />
         <Sidebar isOpen={isOpen} />
         {/* <AnimatePresence */}
-        <div className="main-content bg-slate-100 mt-[-8px]">
+        <div className="main-content bg-slate-100 mt-[-8px] dark:bg-rumble-content-dark">
           <Outlet />
           <Footer />
         </div>

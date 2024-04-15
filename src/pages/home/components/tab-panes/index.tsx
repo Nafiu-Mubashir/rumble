@@ -179,13 +179,13 @@ const TabPane = () => {
         }}
         className={
           isOpen
-            ? "w-[86%] container h-[3.75rem] flex items-center bg-white"
-            : "w-[50%] md:w-full lg:w-[98%] container h-[3.75rem] flex items-center bg-white"
+            ? "w-[86%] container h-[3.75rem] flex items-center bg-white dark:bg-rumble-dark"
+            : "w-[50%] md:w-full lg:w-[98%] container h-[3.75rem] flex items-center bg-white dark:bg-rumble-dark"
         }
       >
         {tabPane.map(({ link, name }, id) => (
           <Carousel.Slide className="h-full" key={id}>
-            <button className="bg-gray-100 relative w-[110px] py-2 px-5 flex justify-center rounded-full text-[0.7rem] font-normal hover:bg-gray-400 hover:text-white">
+            <button className="bg-gray-100 dark:bg-gray-700 relative w-[110px] py-2 px-5 flex justify-center rounded-full text-[0.7rem] font-normal hover:bg-gray-400 hover:text-white">
               <a href={link}>{name}</a>
             </button>
           </Carousel.Slide>

@@ -49,6 +49,8 @@
   position: fixed;
   top: 0;
   z-index: 5;
+  
+  transition: 1s;
 }
 
 .main-side {

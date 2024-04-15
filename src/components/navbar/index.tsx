@@ -12,7 +12,9 @@ import {
 } from "iconsax-react";
 import Login from "../login";
 import logo from "../../assets/rumble-full-logo.svg";
+import darkLogo from "../../assets/rumble-full-logo-v4-dark.svg";
 import MobileSidebar from "../sidebar/mobileSidebar";
+import { useThemeCtx } from "../../context/themeCtx";
 // import { Avatar, Menu } from "@mantine/core";
 
 interface NavbarProps {
@@ -43,10 +45,11 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
 
   const wrapperRef = useRef<HTMLDivElement>(null);
   useOutsideAlerter(wrapperRef);
+  const { theme } = useThemeCtx();
 
   return (
     <nav
-      className="bg-white main-nav w-full z-10 p-2 text-black fixed border border-gray-300"
+      className="bg-white dark:bg-rumble-dark dark:text-white main-nav w-full z-10 p-2 text-black fixed border border-gray-300 dark:border-gray-700"
       ref={wrapperRef}
     >
       <div className="flex justify-between items-center lg:w-[98%] mx-auto">
@@ -55,10 +58,10 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           <HambergerMenu
             size="32"
             color=""
-            className="stroke-black dark:stroke-black cursor-pointer hidden lg:block"
+            className="stroke-black dark:stroke-white cursor-pointer hidden lg:block"
             onClick={toggleSidebar}
           />
-          <img src={logo} alt="" className="h-5 md:h-8 lg:h-full" />
+          <img src={theme === 'light' ? logo : darkLogo} alt="" className="h-5 md:h-8 lg:h-full" />
         </div>
 
         <div
@@ -71,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           <input
             type="search"
             id="default-search"
-            className="block bg-white w-full p-2 ps-3 text-sm text-gray-900 border outline-none border-gray-300 rounded-xl  focus:ring-black focus:border-black "
+            className="block bg-white dark:bg-[#1F2E3C] w-full p-2 ps-3 text-sm text-gray-900 dark:text-gray-300 border outline-none border-gray-300 dark:border-[#1F2E3C] rounded-xl  focus:ring-black focus:border-black dark:focus:ring-gray-500 dark:focus:border-gray-500 "
             placeholder="Search"
             required
           />
@@ -95,7 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
         </div>
 
         <svg
-          className="w-4 h-4 block md:hidden lg:hidden text-black dark:text-black"
+          className="w-4 h-4 block md:hidden lg:hidden text-black dark:text-gray-400"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

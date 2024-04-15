@@ -10,8 +10,8 @@ import TabPane from "./components/tab-panes";
 const Home = () => {
   const { isOpen } = useContext(SlideContext);
   return (
-    <div className="container m-auto">
-      <div className="fixed container bg-white top-[3.1rem] md:top-[3.5rem] lg:top-[3.5rem] w-full h-[3.75rem] z-10 flex items-center gap-2 px-2">
+    <div className="container m-auto dark:text-white">
+      <div className="fixed container bg-white dark:bg-rumble-dark top-[3.1rem] md:top-[3.5rem] lg:top-[3.5rem] w-full h-[3.75rem] z-10 flex items-center gap-2 px-2">
         <TabPane />
       </div>
       <div className="relative inline-block p-4 w-full mt-10">

@@ -33,7 +33,7 @@ const VideoCard = ({
      <div
       className={`${
         isOpen ? "lg:w-[17rem]" : "w-full lg:w-[19rem] lg:h-auto py-2"
-      } px-2`}
+      } px-2 dark:text-white`}
     >
       <div className="w-full cursor-pointer group">
         <div
@@ -63,7 +63,7 @@ const VideoCard = ({
           <img src={video} alt="" className="w-full h-full rounded-lg" />
           <div>
             {playlist === "playlist" ? (
-              <div className="bg-black/90 flex justify-between p-2 absolute w-full bottom-0 rounded-b-md">
+              <div className="bg-rumble-dark/90 flex justify-between p-2 absolute w-full bottom-0 rounded-b-md">
                 <p className="text-white font-semibold">200 video</p>
                 <a href="/">
                   <svg
