@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
+type Theme = 'dark' | 'light' | 'system';
 interface ThemeInterface {
   theme: Theme;
   setTheme: (theme: Theme) => void;
 }
 
-type Theme = 'dark' | 'light' | 'system';
 const ThemeContext = createContext<ThemeInterface>({} as ThemeInterface);
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {

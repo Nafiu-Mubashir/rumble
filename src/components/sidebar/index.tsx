@@ -15,7 +15,7 @@ import { Tooltip } from "@mantine/core";
 import { useThemeCtx } from "../../context/themeCtx";
 
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
-  const { theme, setTheme } = useThemeCtx();
+  const { theme,  } = useThemeCtx();
   const NavLink = [
     {
       icon: (
@@ -225,9 +225,9 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                     isOpen ? "items-start space-y-2 font-bold" : "items-center"
                   } flex flex-col gap-4 cursor-pointer`}
                   key={id}
-                 onClick={() => {
-                setTheme(value);
-              }}
+              //    onClick={() => {
+              //   setTheme(value);
+              // }}
                 >
                   <div
                     className={`${
