@@ -36,7 +36,7 @@ const SingleVideos = () => {
                 />
                 <div>
                   <div className="flex items-center gap-1">
-                    <h4 className="text-[13px] font-bold w-full">
+                    <h4 className="text-[0.8rem] font-bold w-full">
                       Barstool Gambling
                     </h4>
                     <svg
@@ -52,12 +52,12 @@ const SingleVideos = () => {
                       ></path>
                     </svg>
                   </div>
-                  <p className="text-[13px] flex items-center gap-1">
+                  <p className="text-[0.8rem] flex items-center gap-1">
                     6.3k followers
                   </p>
                 </div>
               </div>
-              <button className="rounded-full py-2 px-4 w-[77.08px] md:w- lg: bg-rumble-green font-bold hover:bg-rumble-green-dark">
+              <button className="rounded-full text-[0.8rem] py-2 px-4 w-[77.08px] md:w- lg: bg-rumble-green font-bold hover:bg-rumble-green-dark">
                 Follow
               </button>
             </div>

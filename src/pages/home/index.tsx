@@ -48,10 +48,15 @@ const Home = () => {
               />
             </div>
             <div
-              className={`${
-                isOpen ? "gap-2" : "gap-4"
-              } "grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4"`}
+              className={`${isOpen} grid overflow-y-auto grid-cols-6 gap-4 lg:grid-cols-8`}
             >
+              <CategoryCard />
+              <CategoryCard />
+              <CategoryCard />
+              <CategoryCard />
+              <CategoryCard />
+              <CategoryCard />
+              <CategoryCard />
               <CategoryCard />
             </div>
 

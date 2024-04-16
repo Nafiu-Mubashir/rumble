@@ -5,7 +5,7 @@ import VideoCard from "../../components/card/videoCard";
 const Category = () => {
   return (
     <div>
-      <div className="bg-white w-full p-4">
+      <div className="bg-white dark:bg-rumble-dark dark:text-white w-full p-4">
         <div className="w-full flex items-center gap-3">
           <img
             src={news}
@@ -24,8 +24,9 @@ const Category = () => {
         defaultValue="live Streams"
         classNames={{
           panel: "p-4",
-          tabLabel: "font-[700] lg:text-[1.2rem]",
-          list: 'w-[100%] overflow-x-scroll',
+          tabLabel: "font-[700] lg:text-[1.2rem] ",
+          list: 'w-[100%] overflow-x-scroll dark:!bg-rumble-dark dark:!text-white',
+          tab: 'hover:bg-rumble-dark'
         }}
       >
         <Tabs.List>

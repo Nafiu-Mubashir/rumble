@@ -29,7 +29,7 @@ const VideoCard = ({
 }) => {
   const { isOpen } = useContext(SlideContext);
   return (
-   <a href="/single-video">
+   <a href="/single-video/id">
      <div
       className={`${
         isOpen ? "lg:w-[17rem]" : "w-full lg:w-[19rem] lg:h-auto py-2"

@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
         element: <Category />,
       },
       {
-        path: "single-video",
+        path: "single-video/:id",
         element: <SingleVideos />,
       },
       {

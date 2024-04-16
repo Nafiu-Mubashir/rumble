@@ -199,7 +199,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                   <p
                     className={`${
                       isOpen ? "block" : "hidden"
-                    } bg-gray-100 px-3 py-[0.1rem] flex items-center rounded-full text-[.813rem] gap-2`}
+                    } bg-gray-100 dark:bg-gray-700 px-3 py-[0.1rem] flex items-center rounded-full text-[.813rem] gap-2`}
                   >
                     <RecordCircle size={5} color="red" variant="Bold" />{" "}
                     {followers}

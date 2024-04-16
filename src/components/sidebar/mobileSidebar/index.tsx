@@ -15,9 +15,12 @@ import {
 import logo from "../../../assets/rumble-full-logo.svg";
 import news from "../../../assets/news.jpeg";
 import user from "../../../assets/user.png";
+import { useThemeCtx } from "../../../context/themeCtx";
+import darkLogo from "../../../assets/rumble-full-logo-v4-dark.svg";
 
 const MobileSidebar = () => {
   const [opened, { open, close }] = useDisclosure(false);
+  const { theme,  } = useThemeCtx();
   const NavLink = [
     {
       icon: (
@@ -25,7 +28,7 @@ const MobileSidebar = () => {
           size="18"
           color=""
           variant="Bold"
-          className="stroke-black block mx-auto"
+          className="stroke-black dark:stroke-white block mx-auto"
         />
       ),
       name: "home",
@@ -33,26 +36,26 @@ const MobileSidebar = () => {
     },
     {
       icon: (
-        <FolderOpen size="20" color="" className="stroke-black block mx-auto" />
+        <FolderOpen size="20" color="" className="stroke-black dark:stroke-white block mx-auto" />
       ),
       name: "browse",
       link: "/browse",
     },
     {
-      icon: <Award size="20" color="" className="stroke-black block mx-auto" />,
+      icon: <Award size="20" color="" className="stroke-black dark:stroke-white block mx-auto" />,
       name: "editor picks",
       link: "/editor_picks",
     },
     {
       icon: (
-        <Diagram size="20" color="" className="stroke-black block mx-auto" />
+        <Diagram size="20" color="" className="stroke-black dark:stroke-white block mx-auto" />
       ),
       name: "trending",
       link: "/trending",
     },
     {
       icon: (
-        <Timer1 size="20" color="" className="stroke-black block mx-auto" />
+        <Timer1 size="20" color="" className="stroke-black dark:stroke-white block mx-auto" />
       ),
       name: "latest",
       link: "/latest",
@@ -79,16 +82,16 @@ const MobileSidebar = () => {
 
   const themeList = [
     {
-      value: "system default",
-      icon: <Monitor variant="Outline" size="20" />,
+      value: "system",
+      icon: <Monitor variant="Outline" className={theme === 'light' ? 'dark:stroke-rumble-green-dark stroke-rumble-green-dark' : 'stroke-black dark:stroke-white'} size="20" />,
     },
     {
       value: "dark",
-      icon: <Moon variant="Outline" size="20" />,
+      icon: <Moon variant="Outline" className={theme === 'dark' ? 'dark:stroke-rumble-green-dark stroke-rumble-green-dark' : 'stroke-black dark:stroke-white'} size="20" />,
     },
     {
       value: "light",
-      icon: <Sun1 variant="Outline" size="20" />,
+      icon: <Sun1 variant="Outline" className={theme === 'light' ? 'dark:stroke-rumble-green-dark stroke-rumble-green-dark' : 'stroke-black dark:stroke-white'} size="20" />,
     },
   ];
 
@@ -99,13 +102,13 @@ const MobileSidebar = () => {
         size={"xs"}
         onClose={close}
         classNames={{
-          body: "",
+          header: "dark:bg-rumble-dark",
         }}
-        title={<img src={logo} alt="" className="h-5 md:h-8 lg:h-full" />}
+        title={<img src={theme === 'light' ? logo : darkLogo} alt="" className="h-5 md:h-8 lg:h-full" />}
       >
         <aside
           className={
-            "w-full block lg:z-0 main-side bg-white border border-gray-300 text-black h-screen overflow-y-scroll"
+            "w-full block lg:z-0 main-side bg-white dark:bg-rumble-dark dark:text-white text-black h-screen overflow-y-scroll"
           }
         >
           <div className="p-3 mt-10 m-auto space-y-4">
@@ -146,7 +149,7 @@ const MobileSidebar = () => {
                       <p className={`font-semibold`}>{name}</p>
                     </div>
                     <p
-                      className={`bg-gray-100 px-3 py-[0.1rem] flex items-center rounded-full text-[.813rem] gap-2`}
+                      className={`bg-gray-100 dark:bg-gray-700 px-3 py-[0.1rem] flex items-center rounded-full text-[.813rem] gap-2`}
                     >
                       <RecordCircle size={5} color="red" variant="Bold" />{" "}
                       {followers}
@@ -168,9 +171,9 @@ const MobileSidebar = () => {
                   <div
                     className={`items-start space-y-2 font-bold flex flex-col gap-4 cursor-pointer`}
                     key={id}
-                    // onClick={() => {
-                    //   setTheme(theme === 'dark' ? 'light' : 'dark');
-                    // }}
+                //     onClick={() => {
+                //    setTheme(value);
+                //  }}
                   >
                     <div className={`flex flex-row gap-2 `}>
                       <div
@@ -178,7 +181,7 @@ const MobileSidebar = () => {
                       >
                         {icon}
                       </div>
-                      <p className={`font-semi-bold`}>{value}</p>
+                      <p className={`font-semi-bold text-[0.7rem] ${theme === value ? 'text-rumble-green-dark' : 'dark:text-white'}`}>{value}</p>
                     </div>
                   </div>
                 ))}
@@ -191,7 +194,7 @@ const MobileSidebar = () => {
       <HambergerMenu
         size="32"
         color=""
-        className="stroke-black dark:stroke-black cursor-pointer block lg:hidden"
+        className="stroke-black dark:stroke-white cursor-pointer block lg:hidden"
         onClick={open}
       />
     </>
