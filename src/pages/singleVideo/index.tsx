@@ -247,7 +247,7 @@ const SingleVideos = () => {
             </Spoiler>
           </div>
 
-          <div>
+          <div className="hidden lg:block">
             <div className="flex justify-between items-center mt-2">
               <p>0 comments</p>
               <Select
@@ -255,7 +255,7 @@ const SingleVideos = () => {
                 placeholder="Sort by likes"
                 data={["sort by likes", "sort by newest"]}
                 classNames={{
-                  root: "w-[45%] lg:w-[18%]",
+                  root: "w-[45%] md:w-[18%] lg:w-[18%]",
                   dropdown:
                     "dark:border-gray-700 dark:bg-rumble-dark dark:text-white",
                   option: "hover:!bg-gray-700",
@@ -264,7 +264,19 @@ const SingleVideos = () => {
                 }}
               />
             </div>
-            <Drawer
+            <div className="flex gap-4 mt-4">
+              <Avatar radius="xl" size={50} />
+
+              <textarea
+                id="message"
+                rows={8}
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-2xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-rumble-dark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 px-4 py-4 placeholder:font-bold"
+                placeholder="Add a comment..."
+              ></textarea>
+            </div>
+          
+          </div>
+          <Drawer
               offset={8}
               radius=""
               size={"xs"}
@@ -286,7 +298,7 @@ const SingleVideos = () => {
                   placeholder="Sort by likes"
                   data={["sort by likes", "sort by newest"]}
                   classNames={{
-                    root: "w-[45%] lg:w-[18%]",
+                    root: "w-[45%] md:w-[18%] lg:w-[18%]",
                     dropdown:
                       "dark:border-gray-700 dark:bg-rumble-dark dark:text-white",
                     option: "hover:!bg-gray-700",
@@ -306,18 +318,6 @@ const SingleVideos = () => {
                 ></textarea>
               </div>
             </Drawer>
-
-            <div className="flex gap-4 mt-4">
-              <Avatar radius="xl" size={50} />
-
-              <textarea
-                id="message"
-                rows={8}
-                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-2xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-rumble-dark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 px-4 py-4 placeholder:font-bold"
-                placeholder="Add a comment..."
-              ></textarea>
-            </div>
-          </div>
         </div>
       </div>
       <div
