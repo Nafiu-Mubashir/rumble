@@ -16,7 +16,7 @@ const RelatedVideo = ({
   const { isOpen } = useContext(SlideContext);
   return (
     <div>
-      <div className="w-full cursor-pointer group flex gap-3 dark:text-white mt-4">
+      <div className="w-full cursor-pointer group flex gap-3 dark:text-white lg:mt-4">
         <div
           className={`${
             status === "live"
@@ -26,8 +26,8 @@ const RelatedVideo = ({
               : "border-none"
           } ${
             isOpen
-              ? "w-[80%] lg:h-[9rem]"
-              : "w-1/2 h-[10.125reem] md:h-[13.816rem] lg:h-[9rem] border border-red-500"
+              ? "w-[90%] md:w-[40%] lg:w-[80%]"
+              : "w-[90%] md:w-[30%] lg:w-[60%] h-[7rem] space-y- md:h-[7rem] border border-red-500"
           } rounded-lg relative`}
         >
           {leaderboarder && (
@@ -96,7 +96,7 @@ const RelatedVideo = ({
             )}
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-1">
           <div className="flex items-center gap-3 h-[36.39px]">
             <img
               src={user}

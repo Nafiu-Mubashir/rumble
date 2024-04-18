@@ -11,7 +11,7 @@ import {
 import news from "../../assets/news.jpeg";
 import user from "../../assets/user.png";
 import { RecordCircle } from "iconsax-react";
-import { Tooltip } from "@mantine/core";
+import { Divider, Tooltip } from "@mantine/core";
 import { useThemeCtx } from "../../context/themeCtx";
 
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
@@ -120,7 +120,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
         } lg:z-0 main-side bg-white border dark:bg-rumble-dark dark:text-white border-gray-300 dark:border-gray-700 text-black h-screen overflow-y-scroll `}
       >
         <div className="p-3 mt-12 m-auto space-y-4">
-          <div className="border-b py-3">
+          <div className="py-3">
             <div
               className={`${
                 isOpen ? "items-start space-y-2 font-bold" : "items-center"
@@ -142,8 +142,9 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
               ))}
             </div>
           </div>
+          <Divider className="mb-3 dark:border-gray-700" />
 
-          <div className="w-full border-b py-3">
+          <div className="w-full py-3">
             <h4
               className={`${
                 isOpen ? "text-left flex gap-2" : "text-center"
@@ -209,7 +210,9 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
             </div>
           </div>
 
-          <div className="w-full border-b py-3">
+          <Divider className="mb-3 dark:border-gray-700" />
+
+          <div className="w-full py-3">
             <h4
               className={`${
                 isOpen ? "text-left flex gap-2" : "text-center"
