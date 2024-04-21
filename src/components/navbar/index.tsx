@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../button";
 import {
+  HambergerMenu,
   // Brodcast,
   // Diagram,
-  HambergerMenu,
   // Logout,
   // Profile,
   // Security,
@@ -118,13 +118,18 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           <Login />
           <a href="/registration">
             <Button
-              classes="border border-rumble-green lg:py-2 hover:bg-gray-100"
+              classes="border border-rumble-green dark:hover:bg-gray-700 lg:py-2 hover:bg-gray-100"
               value="Sign Up"
             />
           </a>
         </div>
 
-        {/* <Menu>
+        {/* <Menu 
+          classNames={{
+            dropdown: 'dark:bg-rumble-dark dark:border-gray-700',
+            item: 'dark:text-white dark:hover:bg-gray-700'
+          }}
+        >
           <Menu.Target>
             <Avatar
               variant="gray"
@@ -135,27 +140,27 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           </Menu.Target>
 
           <Menu.Dropdown>
-            <Menu.Item leftSection={<Profile size="20" color="black" />}>
+            <Menu.Item leftSection={<Profile size="20" color="" className="stoke-black dark:stroke-white" />}>
               Account Overview
             </Menu.Item>
             <Menu.Item
-              leftSection={<Diagram size="20" color="black" className="" />}
+              leftSection={<Diagram size="20" color="" className="stoke-black dark:stroke-white" />}
             >
               Stats & Earnings
             </Menu.Item>
-            <Menu.Item leftSection={<Video size="20" color="black" />}>
+            <Menu.Item leftSection={<Video size="20" color="" className="stoke-black dark:stroke-white" />}>
               My Content
             </Menu.Item>
-            <Menu.Item leftSection={<Security size="20" color="black" />}>
+            <Menu.Item leftSection={<Security size="20" color="" className="stoke-black dark:stroke-white" />}>
               My Channels
             </Menu.Item>
-            <Menu.Item leftSection={<Brodcast size="20" color="black" />}>
+            <Menu.Item leftSection={<Brodcast size="20" color="" className="stoke-black dark:stroke-white" />}>
               Live Streaming
             </Menu.Item>
-            <Menu.Item leftSection={<Setting2 size="20" color="black" />}>
+            <Menu.Item leftSection={<Setting2 size="20" color="" className="stoke-black dark:stroke-white" />}>
               Account Option
             </Menu.Item>
-            <Menu.Item leftSection={<Logout size="20" color="black" />}>
+            <Menu.Item leftSection={<Logout size="20" color="" className="stoke-black dark:stroke-white" />}>
               Sign Out
             </Menu.Item>
           </Menu.Dropdown>

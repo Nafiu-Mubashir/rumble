@@ -11,12 +11,12 @@ import {
 import news from "../../assets/news.jpeg";
 import user from "../../assets/user.png";
 import { RecordCircle } from "iconsax-react";
-import { Divider, Tooltip } from "@mantine/core";
+import { Divider, Tooltip, NavLink } from "@mantine/core";
 import { useThemeCtx } from "../../context/themeCtx";
 
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const { theme,  } = useThemeCtx();
-  const NavLink = [
+  const navLink = [
     {
       icon: (
         <House2
@@ -51,7 +51,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
         />
       ),
       name: "editor picks",
-      link: "/editor_picks",
+      link: "/editor-picks",
     },
     {
       icon: (
@@ -100,18 +100,48 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const themeList = [
     {
       value: "system",
-      icon: <Monitor variant="Outline" className={theme === 'light' ? 'dark:stroke-rumble-green-dark stroke-rumble-green-dark' : 'stroke-black dark:stroke-white'} size="20" />,
+      icon: (
+        <Monitor
+          variant="Outline"
+          className={
+            theme === "light"
+              ? "dark:stroke-rumble-green-dark stroke-rumble-green-dark"
+              : "stroke-black dark:stroke-white"
+          }
+          size="20"
+        />
+      ),
     },
     {
       value: "dark",
-      icon: <Moon variant="Outline" className={theme === 'dark' ? 'dark:stroke-rumble-green-dark stroke-rumble-green-dark' : 'stroke-black dark:stroke-white'} size="20" />,
+      icon: (
+        <Moon
+          variant="Outline"
+          className={
+            theme === "dark"
+              ? "dark:stroke-rumble-green-dark stroke-rumble-green-dark"
+              : "stroke-black dark:stroke-white"
+          }
+          size="20"
+        />
+      ),
     },
     {
       value: "light",
-      icon: <Sun1 variant="Outline" className={theme === 'light' ? 'dark:stroke-rumble-green-dark stroke-rumble-green-dark' : 'stroke-black dark:stroke-white'} size="20" />,
+      icon: (
+        <Sun1
+          variant="Outline"
+          className={
+            theme === "light"
+              ? "dark:stroke-rumble-green-dark stroke-rumble-green-dark"
+              : "stroke-black dark:stroke-white"
+          }
+          size="20"
+        />
+      ),
     },
   ];
- 
+
   return (
     <>
       <aside
@@ -126,19 +156,18 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                 isOpen ? "items-start space-y-2 font-bold" : "items-center"
               } flex flex-col gap-4`}
             >
-              {NavLink.map(({ icon, name, link }, id) => (
-                <a
-                  href={link}
+              {navLink.map(({ icon, name, link }, id) => (
+                <NavLink
                   key={id}
+                  href={link}
+                  label={name}
+                  leftSection={icon}
                   className={`${
                     isOpen
-                      ? "flex-row gap-4 hover:bg-gray-10 hover:rounded-l  "
-                      : "flex-col w-16 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg"
-                  } flex w-ful py-2`}
-                >
-                  {icon}
-                  <p className="capitalize text-center text-[0.8rem]">{name}</p>
-                </a>
+                      ? "flex-row hover:bg-gray-10 hover:rounded-l  "
+                      : "flex-col w-16 hover:bg-gray-100 "
+                  } flex py-2 dark:hover:bg-gray-700 hover:rounded-lg capitalize`}
+                />
               ))}
             </div>
           </div>
@@ -228,9 +257,9 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                     isOpen ? "items-start space-y-2 font-bold" : "items-center"
                   } flex flex-col gap-4 cursor-pointer`}
                   key={id}
-              //    onClick={() => {
-              //   setTheme(value);
-              // }}
+                  // onClick={() => {
+                  //   setTheme(value);
+                  // }}
                 >
                   <div
                     className={`${
@@ -244,7 +273,15 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                     >
                       {icon}
                     </div>
-                    <p className={`font-semi-bold text-[0.7rem] ${theme === value ? 'text-rumble-green-dark' : 'dark:text-white'}`}>{value}</p>
+                    <p
+                      className={`font-semi-bold text-[0.7rem] ${
+                        theme === value
+                          ? "text-rumble-green-dark"
+                          : "dark:text-white"
+                      }`}
+                    >
+                      {value}
+                    </p>
                   </div>
                 </div>
               ))}

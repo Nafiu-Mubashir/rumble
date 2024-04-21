@@ -1,5 +1,5 @@
 import { useDisclosure } from "@mantine/hooks";
-import { Drawer } from "@mantine/core";
+import { Drawer, NavLink } from "@mantine/core";
 import {
   Award,
   Diagram,
@@ -20,8 +20,8 @@ import darkLogo from "../../../assets/rumble-full-logo-v4-dark.svg";
 
 const MobileSidebar = () => {
   const [opened, { open, close }] = useDisclosure(false);
-  const { theme,  } = useThemeCtx();
-  const NavLink = [
+  const { theme } = useThemeCtx();
+  const navLink = [
     {
       icon: (
         <House2
@@ -36,26 +36,44 @@ const MobileSidebar = () => {
     },
     {
       icon: (
-        <FolderOpen size="20" color="" className="stroke-black dark:stroke-white block mx-auto" />
+        <FolderOpen
+          size="20"
+          color=""
+          className="stroke-black dark:stroke-white block mx-auto"
+        />
       ),
       name: "browse",
       link: "/browse",
     },
     {
-      icon: <Award size="20" color="" className="stroke-black dark:stroke-white block mx-auto" />,
+      icon: (
+        <Award
+          size="20"
+          color=""
+          className="stroke-black dark:stroke-white block mx-auto"
+        />
+      ),
       name: "editor picks",
-      link: "/editor_picks",
+      link: "/editor-picks",
     },
     {
       icon: (
-        <Diagram size="20" color="" className="stroke-black dark:stroke-white block mx-auto" />
+        <Diagram
+          size="20"
+          color=""
+          className="stroke-black dark:stroke-white block mx-auto"
+        />
       ),
       name: "trending",
       link: "/trending",
     },
     {
       icon: (
-        <Timer1 size="20" color="" className="stroke-black dark:stroke-white block mx-auto" />
+        <Timer1
+          size="20"
+          color=""
+          className="stroke-black dark:stroke-white block mx-auto"
+        />
       ),
       name: "latest",
       link: "/latest",
@@ -83,15 +101,45 @@ const MobileSidebar = () => {
   const themeList = [
     {
       value: "system",
-      icon: <Monitor variant="Outline" className={theme === 'light' ? 'dark:stroke-rumble-green-dark stroke-rumble-green-dark' : 'stroke-black dark:stroke-white'} size="20" />,
+      icon: (
+        <Monitor
+          variant="Outline"
+          className={
+            theme === "light"
+              ? "dark:stroke-rumble-green-dark stroke-rumble-green-dark"
+              : "stroke-black dark:stroke-white"
+          }
+          size="20"
+        />
+      ),
     },
     {
       value: "dark",
-      icon: <Moon variant="Outline" className={theme === 'dark' ? 'dark:stroke-rumble-green-dark stroke-rumble-green-dark' : 'stroke-black dark:stroke-white'} size="20" />,
+      icon: (
+        <Moon
+          variant="Outline"
+          className={
+            theme === "dark"
+              ? "dark:stroke-rumble-green-dark stroke-rumble-green-dark"
+              : "stroke-black dark:stroke-white"
+          }
+          size="20"
+        />
+      ),
     },
     {
       value: "light",
-      icon: <Sun1 variant="Outline" className={theme === 'light' ? 'dark:stroke-rumble-green-dark stroke-rumble-green-dark' : 'stroke-black dark:stroke-white'} size="20" />,
+      icon: (
+        <Sun1
+          variant="Outline"
+          className={
+            theme === "light"
+              ? "dark:stroke-rumble-green-dark stroke-rumble-green-dark"
+              : "stroke-black dark:stroke-white"
+          }
+          size="20"
+        />
+      ),
     },
   ];
 
@@ -104,7 +152,13 @@ const MobileSidebar = () => {
         classNames={{
           header: "dark:bg-rumble-dark",
         }}
-        title={<img src={theme === 'light' ? logo : darkLogo} alt="" className="h-5 md:h-8 lg:h-full" />}
+        title={
+          <img
+            src={theme === "light" ? logo : darkLogo}
+            alt=""
+            className="h-5 md:h-8 lg:h-full"
+          />
+        }
       >
         <aside
           className={
@@ -116,13 +170,14 @@ const MobileSidebar = () => {
               <div
                 className={`items-start space-y-2 font-bold flex flex-col gap-4`}
               >
-                {NavLink.map(({ icon, name, link }, id) => (
-                  <a href={link} key={id} className={`flex flex-row gap-2`}>
-                    {icon}
-                    <p className="capitalize text-center text-[0.8rem]">
-                      {name}
-                    </p>
-                  </a>
+                {navLink.map(({ icon, name, link }, id) => (
+                  <NavLink
+                    key={id}
+                    href={link}
+                    label={name}
+                    leftSection={icon}
+                    className={`flex py-2 dark:hover:bg-gray-700 hover:rounded-lg capitalize`}
+                  />
                 ))}
               </div>
             </div>
@@ -171,9 +226,9 @@ const MobileSidebar = () => {
                   <div
                     className={`items-start space-y-2 font-bold flex flex-col gap-4 cursor-pointer`}
                     key={id}
-                //     onClick={() => {
-                //    setTheme(value);
-                //  }}
+                    //     onClick={() => {
+                    //    setTheme(value);
+                    //  }}
                   >
                     <div className={`flex flex-row gap-2 `}>
                       <div
@@ -181,7 +236,15 @@ const MobileSidebar = () => {
                       >
                         {icon}
                       </div>
-                      <p className={`font-semi-bold text-[0.7rem] ${theme === value ? 'text-rumble-green-dark' : 'dark:text-white'}`}>{value}</p>
+                      <p
+                        className={`font-semi-bold text-[0.7rem] ${
+                          theme === value
+                            ? "text-rumble-green-dark"
+                            : "dark:text-white"
+                        }`}
+                      >
+                        {value}
+                      </p>
                     </div>
                   </div>
                 ))}

@@ -6,7 +6,7 @@ const CategoryCard = () => {
   const { isOpen } = useContext(SlideContext);
   return (
    <a href={`/category/{id}`}>
-     <div className={isOpen ? '' : 'w-[8rem]'}>
+     <div className={'w-[9rem]'}>
         <img src={news} alt="news image" className={isOpen ? 'h-[12rem] rounded-lg' : 'w-full h-[14rem] rounded-lg'} />
         <h4 className='font-bold'>News</h4>
         <p className='text-[0.813rem]'>16.9k viewers</p>

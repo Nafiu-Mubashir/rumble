@@ -48,9 +48,8 @@ const Home = () => {
               />
             </div>
             <div
-              className={`${isOpen} grid overflow-y-auto grid-cols-6 gap-4 lg:grid-cols-8`}
+              className={`${isOpen} grid overflow-y-auto grid-cols-6 gap-4 lg:grid-cols-7`}
             >
-              <CategoryCard />
               <CategoryCard />
               <CategoryCard />
               <CategoryCard />

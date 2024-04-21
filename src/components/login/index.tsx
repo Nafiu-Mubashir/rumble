@@ -12,7 +12,7 @@ const Login = () => {
       social: "facebook",
     },
     {
-      icon: <Google size="16" color="red" variant="Bold" />,
+      icon: <Google size="16" color="" className="stroke-red-500 dark:stroke-white fill-red-500 dark:fill-white" variant="Bold" />,
       social: "google",
     },
     {
@@ -36,8 +36,10 @@ const Login = () => {
           backgroundOpacity: 0.8,
         }}
         classNames={{
+          header: 'dark:bg-rumble-dark dark:text-white',
           title: "!font-bold !text-2xl",
-          close: "!stroke-black",
+          close: "!stroke-black dark:!stroke-white dark:hover:bg-rumble-dark",
+          content: 'dark:!bg-rumble-dark dark:text-white'
         }}
       >
         <div className="w-full space-y-4">
@@ -48,7 +50,7 @@ const Login = () => {
           <Input
             placeholder="Email or Username"
             classNames={{
-              input: "border-gray-200 focus:ring-none focus:border-gray-200",
+              input: "border-gray-200 focus:ring-gray-200 focus:border-gray-200 dark:bg-gray-700 dark:border-none",
             }}
             size="md"
             radius={0}
@@ -56,26 +58,26 @@ const Login = () => {
           <PasswordInput
             placeholder="Password"
             classNames={{
-              input: "border-gray-200 focus:ring-none focus:border-gray-200",
+              input: "border-gray-200 focus:ring-gray-200 focus:border-gray-200 dark:bg-gray-700 dark:border-none",
               innerInput:
                 "border-gray-200 focus:ring-none focus:border-gray-200",
             }}
             size="md"
             radius={0}
           />
-          <div className="flex gap-3 justify-center items-center border-b py-2 lg:p-4">
-            <Button value="Sign in" classes="bg-blue-500 text-white" />
+          <div className="flex gap-3 justify-center items-center border-b dark:border-gray-700 py-2 lg:p-4">
+            <Button value="Sign in" classes="bg-blue-500 py-3 px-5 dark:bg-gray-300 dark:text-black text-white" />
             <a href="/" className="font-semi-bold">
               Forgot your password?
             </a>
           </div>
 
-          <div className="border-b p-4 space-y-3">
+          <div className="border-b dark:border-gray-700 p-4 space-y-3">
             <p className="text-center">Alternatively, sign in with:</p>
             <div className="flex gap-3 justify-center items-center">
               {loginOptions.map(({ icon, social }, id) => (
                 <button
-                  className={`flex gap-2 items-center first:bg-blue-500 even:border even:border-gray-300 last:bg-black text-white even:text-black py-1 px-3 rounded-full text-[0.6rem] lg:text-[0.83rem] capitalize`}
+                  className={`flex gap-2 items-center dark:text-white dark:bg-rumble-dark dark:border dark:border-rumble-green first:bg-blue-500 even:border even:border-gray-300 last:bg-black text-white even:text-black py-1 px-3 rounded-full text-[0.6rem] lg:text-[0.83rem] capitalize`}
                   key={id}
                 >
                   {icon}
@@ -96,7 +98,7 @@ const Login = () => {
       <Button
         onClick={open}
         value="Sign in"
-        classes="border-0 lg:py-2 hover:bg-gray-100 outline-none"
+        classes="border-0 lg:py-2 hover:bg-gray-100 dark:hover:bg-gray-700 outline-none"
       />
     </>
   );

@@ -24,9 +24,9 @@ const Category = () => {
         defaultValue="live Streams"
         classNames={{
           panel: "p-4",
-          tabLabel: "font-[700] lg:text-[1.2rem] ",
-          list: 'w-[100%] overflow-x-scroll dark:!bg-rumble-dark dark:!text-white',
-          tab: 'hover:bg-rumble-dark'
+          tabLabel: "font-[700] lg:text-[1.2rem]",
+          list: 'w-[100%] overflow-x-scroll lg:overflow-hidden dark:!bg-rumble-dark dark:!text-white',
+          tab: 'hover:bg-gray-200 dark:hover:!bg-rumble-dark'
         }}
       >
         <Tabs.List>
@@ -36,11 +36,11 @@ const Category = () => {
           <Tabs.Tab value="category">Category</Tabs.Tab>
         </Tabs.List>
 
-        <Tabs.Panel value="live Streams">
+        <Tabs.Panel value="live Streams" className="grid md:grid-cols-2 lg:grid-cols-4">
             <VideoCard status="live" />
         </Tabs.Panel>
 
-        <Tabs.Panel value="recoded Streams">
+        <Tabs.Panel value="recoded Streams" className="grid md:grid-cols-2 lg:grid-cols-4">
         <VideoCard />
         </Tabs.Panel>
 
