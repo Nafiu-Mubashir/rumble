@@ -46,12 +46,12 @@ const Trending = () => {
             <SectionCards />
 
             <Pagination
-              total={10}
+              total={5}
               value={2}
               // onChange={}
               color="#77b23b"
               radius={'lg'}
-              className="mt-5 w-[50%] md:w-[40%] lg:w-[50%] m-auto mb-4 sticky"
+              className="mt-5 w-full md:w-[50%] m-auto mb-4 sticky"
               classNames={{
                 // control: 'dark:bg-rumble-dark dark:text-white dark:hover:bg-rumble-dark',
                 dots: 'dark:text-white',
