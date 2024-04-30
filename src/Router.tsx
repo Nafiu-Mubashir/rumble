@@ -8,6 +8,10 @@ import EditorPicks from "./pages/editorPicks";
 import Trending from "./pages/trending";
 import Latest from "./pages/latest";
 import SingleVideos from "./pages/singleVideo";
+import Library from "./pages/library";
+import WahtchLater from "./pages/watchLater";
+import WatchHistory from "./pages/watchHistory";
+import UploadVideo from "./pages/uploadVideo";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +45,22 @@ export const router = createBrowserRouter([
       {
         path: "single-video/:id",
         element: <SingleVideos />,
+      },
+      {
+        path: "library",
+        element: <Library />,
+      },
+      {
+        path: "watch-later",
+        element: <WahtchLater />,
+      },
+      {
+        path: "watch-history",
+        element: <WatchHistory />,
+      },
+      {
+        path: "upload-video",
+        element: <UploadVideo />,
       },
       {
         path: "registration",

@@ -1,21 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../button";
-import {
-  HambergerMenu,
-  // Brodcast,
-  // Diagram,
-  // Logout,
-  // Profile,
-  // Security,
-  // Setting2,
-  // Video,
-} from "iconsax-react";
+import { HambergerMenu } from "iconsax-react";
 import Login from "../login";
-import logo from "../../assets/rumble-full-logo.svg";
-import darkLogo from "../../assets/rumble-full-logo-v4-dark.svg";
+import logo from "../../../public/titan-dark.png";
+import darkLogo from "../../../public/titan-white.png";
 import MobileSidebar from "../sidebar/mobileSidebar";
 import { useThemeCtx } from "../../context/themeCtx";
-// import { Avatar, Menu } from "@mantine/core";
+import Notifications from "./notification";
+import Upload from "./upload";
+import UserProfile from "./profile";
 
 interface NavbarProps {
   toggleSidebar: () => void;
@@ -50,8 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
   return (
     <nav
       className="bg-white dark:bg-rumble-dark dark:text-white main-nav w-full z-10 p-2 text-black fixed border border-gray-300 dark:border-gray-700"
-      ref={wrapperRef}
-    >
+      ref={wrapperRef}>
       <div className="flex justify-between items-center lg:w-[98%] mx-auto">
         <div className="flex gap-1 md:gap-5 lg:gap-10 items-center">
           <MobileSidebar />
@@ -61,16 +53,18 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
             className="stroke-black dark:stroke-white cursor-pointer hidden lg:block"
             onClick={toggleSidebar}
           />
-          <img src={theme === 'light' ? logo : darkLogo} alt="" className="h-5 md:h-8 lg:h-full" />
+          <img
+            src={theme === "light" ? logo : darkLogo}
+            alt=""
+            className="h-5 md:h-8 lg:h-6 w-full"
+          />
         </div>
-
         <div
           className={
             input
               ? "absolute block left-0 right-0 md:w-[40%] lg:w-[35%]"
               : "relative md:w-[40%] lg:w-[35%] hidden md:block lg:block"
-          }
-        >
+          }>
           <input
             type="search"
             id="default-search"
@@ -84,8 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              viewBox="0 0 20 20"
-            >
+              viewBox="0 0 20 20">
               <path
                 stroke="currentColor"
                 strokeLinecap="round"
@@ -96,15 +89,13 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
             </svg>
           </div>
         </div>
-
         <svg
           className="w-4 h-4 block md:hidden lg:hidden text-black dark:text-gray-400"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 20 20"
-          onClick={showInput}
-        >
+          onClick={showInput}>
           <path
             stroke="currentColor"
             strokeLinecap="round"
@@ -113,58 +104,23 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
             d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
           />
         </svg>
-
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center hidden">
           <Login />
           <a href="/registration">
             <Button
-              classes="border border-rumble-green dark:hover:bg-gray-700 lg:py-2 hover:bg-gray-100"
+              classes="border border-titan-blue dark:hover:bg-gray-700 lg:py-2 hover:bg-gray-100"
               value="Sign Up"
             />
           </a>
         </div>
 
-        {/* <Menu 
-          classNames={{
-            dropdown: 'dark:bg-rumble-dark dark:border-gray-700',
-            item: 'dark:text-white dark:hover:bg-gray-700'
-          }}
-        >
-          <Menu.Target>
-            <Avatar
-              variant="gray"
-              radius="xl"
-              src=""
-              className="cursor-pointer"
-            />
-          </Menu.Target>
+        <div className="flex items-center gap-5">
+          <Upload />
 
-          <Menu.Dropdown>
-            <Menu.Item leftSection={<Profile size="20" color="" className="stoke-black dark:stroke-white" />}>
-              Account Overview
-            </Menu.Item>
-            <Menu.Item
-              leftSection={<Diagram size="20" color="" className="stoke-black dark:stroke-white" />}
-            >
-              Stats & Earnings
-            </Menu.Item>
-            <Menu.Item leftSection={<Video size="20" color="" className="stoke-black dark:stroke-white" />}>
-              My Content
-            </Menu.Item>
-            <Menu.Item leftSection={<Security size="20" color="" className="stoke-black dark:stroke-white" />}>
-              My Channels
-            </Menu.Item>
-            <Menu.Item leftSection={<Brodcast size="20" color="" className="stoke-black dark:stroke-white" />}>
-              Live Streaming
-            </Menu.Item>
-            <Menu.Item leftSection={<Setting2 size="20" color="" className="stoke-black dark:stroke-white" />}>
-              Account Option
-            </Menu.Item>
-            <Menu.Item leftSection={<Logout size="20" color="" className="stoke-black dark:stroke-white" />}>
-              Sign Out
-            </Menu.Item>
-          </Menu.Dropdown>
-        </Menu> */}
+          <Notifications />
+
+          <UserProfile />
+        </div>
       </div>
     </nav>
   );

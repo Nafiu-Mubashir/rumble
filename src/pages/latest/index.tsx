@@ -26,14 +26,12 @@ const Latest = () => {
           justify="space-between"
           classNames={{
             root: "gap-3",
-          }}
-        >
+          }}>
           <Grid.Col
             span={{ base: 12, md: 12, lg: 8 }}
             classNames={{
               col: "",
-            }}
-          >
+            }}>
             <SectionCards />
             <SectionCards />
             <Pagination
@@ -41,11 +39,11 @@ const Latest = () => {
               value={2}
               // onChange={}
               color="#77b23b"
-              radius={'lg'}
+              radius={"lg"}
               className="mt-5 w-full md:w-[50%] m-auto mb-4 sticky"
               classNames={{
                 // control: 'dark:bg-rumble-dark dark:text-white dark:hover:bg-rumble-dark',
-                dots: 'dark:text-white',
+                dots: "dark:text-white",
               }}
             />
           </Grid.Col>
@@ -53,8 +51,7 @@ const Latest = () => {
             span={{ base: 12, md: 12, lg: 4 }}
             classNames={{
               col: "hidden lg:block",
-            }}
-          >
+            }}>
             <div className="dark:bg-rumble-dark rounded-lg !p-2 lg:!p-5 mb-3 dark:text-white">
               <div>
                 <Radio.Group
@@ -63,8 +60,7 @@ const Latest = () => {
                   description=""
                   classNames={{
                     label: "mb-3",
-                  }}
-                >
+                  }}>
                   {sortBy.map((item) => (
                     <Radio
                       value={item}
@@ -87,8 +83,7 @@ const Latest = () => {
                   description=""
                   classNames={{
                     label: "mb-3",
-                  }}
-                >
+                  }}>
                   {videoDate.map((item) => (
                     <Radio
                       value={item}
@@ -111,8 +106,7 @@ const Latest = () => {
                   description=""
                   classNames={{
                     label: "mb-3",
-                  }}
-                >
+                  }}>
                   {duration.map((item) => (
                     <Radio
                       value={item}
@@ -135,8 +129,7 @@ const Latest = () => {
                   description=""
                   classNames={{
                     label: "mb-3",
-                  }}
-                >
+                  }}>
                   {license.map((item) => (
                     <Radio
                       value={item}
@@ -166,10 +159,13 @@ const Latest = () => {
         title={
           <div
             onClick={close}
-            className="cursor-pointer bg-black mx-auto font-semibold flex items-center gap-1 dark:bg-rumble-dark dark:border border-rumble-green-dark text-white p-1 rounded-full w-[7rem] justify-center mb-3 text-[0.8rem]"
-          >
+            className="cursor-pointer bg-black mx-auto font-semibold flex items-center gap-1 dark:bg-rumble-dark dark:border border-rumble-green-dark text-white p-1 rounded-full w-[7rem] justify-center mb-3 text-[0.8rem]">
             Collapse
-            <ArrowDown2 size="16" color="white" variant="Bold" />
+            <ArrowDown2
+              size="16"
+              color="white"
+              variant="Bold"
+            />
           </div>
         }
         withCloseButton={false}
@@ -178,8 +174,7 @@ const Latest = () => {
           title: "!font-bold !text-2xl w-full",
           close: "!stroke-black dark:!stroke-white dark:hover:bg-rumble-dark",
           content: "dark:!bg-rumble-dark dark:text-white",
-        }}
-      >
+        }}>
         <div className="dark:bg-rumble-dark rounded-lg !p-2 lg:!p-5 mb-3 dark:text-white">
           <div>
             <Radio.Group
@@ -188,8 +183,7 @@ const Latest = () => {
               description=""
               classNames={{
                 label: "mb-3",
-              }}
-            >
+              }}>
               {sortBy.map((item) => (
                 <Radio
                   value={item}
@@ -212,8 +206,7 @@ const Latest = () => {
               description=""
               classNames={{
                 label: "mb-3",
-              }}
-            >
+              }}>
               {videoDate.map((item) => (
                 <Radio
                   value={item}
@@ -236,8 +229,7 @@ const Latest = () => {
               description=""
               classNames={{
                 label: "mb-3",
-              }}
-            >
+              }}>
               {duration.map((item) => (
                 <Radio
                   value={item}
@@ -260,8 +252,7 @@ const Latest = () => {
               description=""
               classNames={{
                 label: "mb-3",
-              }}
-            >
+              }}>
               {license.map((item) => (
                 <Radio
                   value={item}
@@ -283,10 +274,13 @@ const Latest = () => {
       <div className="w-full backdrop-blur-md p-3 bottom-0 fixed lg:hidden">
         <div
           onClick={open}
-          className="cursor-pointer bg-black mx-auto font-semibold flex items-center gap-1 dark:bg-rumble-dark dark:border border-rumble-green-dark text-white p-1 rounded-full w-[6rem] justify-center mb-3"
-        >
+          className="cursor-pointer bg-black mx-auto font-semibold flex items-center gap-1 dark:bg-rumble-dark dark:border border-rumble-green-dark text-white p-1 rounded-full w-[6rem] justify-center mb-3">
           Filters
-          <ArrowUp2 size="16" color="white" variant="Bold" />
+          <ArrowUp2
+            size="16"
+            color="white"
+            variant="Bold"
+          />
         </div>
       </div>
     </div>
