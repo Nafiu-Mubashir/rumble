@@ -2,7 +2,6 @@ import {
   Award,
   Diagram,
   FolderOpen,
-  House2,
   Moon,
   Sun1,
   Timer1,
@@ -19,12 +18,29 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const navLink = [
     {
       icon: (
-        <House2
-          size="16"
-          color=""
-          variant="Bold"
-          className="stroke-black hover:text-stroke-white dark:stroke-white"
-        />
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="main-menu-icon">
+          <g clip-path="url(#clip0_239_730)">
+            <path
+              d="M4 10V21H10V15H14V21H20V10L12 3L4 10Z"
+              fill="currentColor"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_239_730">
+              <rect
+                width="24"
+                height="24"
+                fill="currentColor"
+              />
+            </clipPath>
+          </defs>
+        </svg>
       ),
       name: "home",
       link: "/",
@@ -229,7 +245,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                   to={link}
                   className={`${
                     isOpen ? "flex-ro w-full p-2 gap-2" : "flex-col w-14"
-                  } flex items-center py-2 hover:bg-titan-blue hover:text-white group dark:hover:bg-gray-700 hover:rounded-lg capitalize`}>
+                  } flex items-center py-2 hover:bg-titan-blue hover:text-white group  dark:hover:bg-gray-700 hover:rounded-lg capitalize`}>
                   {icon} {name}
                 </Link>
               ))}

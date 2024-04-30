@@ -5,6 +5,14 @@ import news from '../../assets/browse-news.svg';
 import { Tabs } from '@mantine/core';
 import VideoCard from '../../components/card/videoCard';
 import CategoryCard from '../../components/card/categoryCard';
+import v2 from "../../assets/v2.png";
+import v3 from "../../assets/v3.png";
+import v4 from "../../assets/v4.png";
+import v5 from "../../assets/v5.png";
+import v6 from "../../assets/v6.png";
+import v7 from "../../assets/v7.png";
+import v8 from "../../assets/v8.png";
+import v9 from "../../assets/v9.png";
 
 const Browse = () => {
   return (
@@ -62,15 +70,15 @@ const Browse = () => {
           <CategoryCard />
           <CategoryCard />
         </Tabs.Panel>
-        <Tabs.Panel value="live Streams" className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4'>
-            <VideoCard status="live" />
-            <VideoCard status="live" />
-            <VideoCard status="live" />
-            <VideoCard status="live" />
-            <VideoCard status="live" />
-            <VideoCard status="live" />
-            <VideoCard status="live" />
-            <VideoCard status="live" />
+        <Tabs.Panel value="live Streams" className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3'>
+            <VideoCard videoLink={v2} status="live" />
+            <VideoCard videoLink={v3} status="live" />
+            <VideoCard videoLink={v4} status="live" />
+            <VideoCard videoLink={v5} status="live" />
+            <VideoCard videoLink={v6} status="live" />
+            <VideoCard videoLink={v7} status="live" />
+            <VideoCard videoLink={v8} status="live" />
+            <VideoCard videoLink={v9} status="live" />
         </Tabs.Panel>
 
       </Tabs>

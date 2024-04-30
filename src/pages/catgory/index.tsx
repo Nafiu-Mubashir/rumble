@@ -1,6 +1,8 @@
 import { Tabs } from "@mantine/core";
 import news from "../../assets/news.jpeg";
 import VideoCard from "../../components/card/videoCard";
+import v2 from "../../assets/v2.png";
+import v3 from "../../assets/v3.png";
 
 const Category = () => {
   return (
@@ -37,11 +39,11 @@ const Category = () => {
         </Tabs.List>
 
         <Tabs.Panel value="live Streams" className="grid md:grid-cols-2 lg:grid-cols-4">
-            <VideoCard status="live" />
+            <VideoCard videoLink={v3} status="live" />
         </Tabs.Panel>
 
         <Tabs.Panel value="recoded Streams" className="grid md:grid-cols-2 lg:grid-cols-4">
-        <VideoCard />
+        <VideoCard videoLink={v2} />
         </Tabs.Panel>
 
         <Tabs.Panel value="videos">Videos tab content</Tabs.Panel>
