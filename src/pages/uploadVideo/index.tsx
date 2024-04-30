@@ -28,7 +28,7 @@ const UploadVideo = () => {
   ];
   return (
     <div className="dark:text-gray-500 md:p-4 p-5 space-y-5">
-      <h1 className="text-3xl font-semibold">
+      <h1 className="text-3xl font-semibold text-titan-blue dark:text-gray-500">
         UPLOAD, SHARE AND LICENSE YOUR VIDEOS
       </h1>
       <Grid className="">

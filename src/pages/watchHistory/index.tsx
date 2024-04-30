@@ -1,8 +1,11 @@
+import NoHistory from "../../components/noHistory";
 
 const WatchHistory = () => {
   return (
-    <div>WatchHistory</div>
-  )
-}
+    <div>
+      <NoHistory title="Watch History" />
+    </div>
+  );
+};
 
-export default WatchHistory
+export default WatchHistory;

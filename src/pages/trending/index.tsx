@@ -15,13 +15,16 @@ const Trending = () => {
       <SectionHeader
         title="Trending"
         icon={
-          <svg width="70" height="70" viewBox="0 0 20 20" fill="none">
+          <svg
+            width="70"
+            height="70"
+            viewBox="0 0 20 20"
+            fill="none">
             <g
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
-            >
+              stroke-width="2">
               <path d="m19.167 5-7.917 7.917L7.083 8.75.833 15"></path>
               <path d="M14.167 5h5v5"></path>
             </g>
@@ -34,14 +37,12 @@ const Trending = () => {
           justify="space-between"
           classNames={{
             root: "gap-3",
-          }}
-        >
+          }}>
           <Grid.Col
             span={{ base: 12, md: 12, lg: 8 }}
             classNames={{
               col: "",
-            }}
-          >
+            }}>
             <SectionCards />
             <SectionCards />
 
@@ -49,12 +50,12 @@ const Trending = () => {
               total={5}
               value={2}
               // onChange={}
-              color="#77b23b"
-              radius={'lg'}
+              color="#003366"
+              radius={"lg"}
               className="mt-5 w-full md:w-[50%] m-auto mb-4 sticky"
               classNames={{
                 // control: 'dark:bg-rumble-dark dark:text-white dark:hover:bg-rumble-dark',
-                dots: 'dark:text-white',
+                dots: "dark:text-white",
               }}
             />
           </Grid.Col>
@@ -62,8 +63,7 @@ const Trending = () => {
             span={{ base: 12, md: 12, lg: 4 }}
             classNames={{
               col: "hidden lg:block",
-            }}
-          >
+            }}>
             <div className="dark:bg-rumble-dark rounded-lg !p-2 lg:!p-5 mb-3 dark:text-white">
               <div>
                 <Radio.Group
@@ -72,8 +72,7 @@ const Trending = () => {
                   description=""
                   classNames={{
                     label: "mb-3",
-                  }}
-                >
+                  }}>
                   {sortBy.map((item) => (
                     <Radio
                       value={item}
@@ -96,8 +95,7 @@ const Trending = () => {
                   description=""
                   classNames={{
                     label: "mb-3",
-                  }}
-                >
+                  }}>
                   {videoDate.map((item) => (
                     <Radio
                       value={item}
@@ -120,8 +118,7 @@ const Trending = () => {
                   description=""
                   classNames={{
                     label: "mb-3",
-                  }}
-                >
+                  }}>
                   {duration.map((item) => (
                     <Radio
                       value={item}
@@ -144,8 +141,7 @@ const Trending = () => {
                   description=""
                   classNames={{
                     label: "mb-3",
-                  }}
-                >
+                  }}>
                   {license.map((item) => (
                     <Radio
                       value={item}
@@ -175,10 +171,13 @@ const Trending = () => {
         title={
           <div
             onClick={close}
-            className="cursor-pointer bg-black mx-auto font-semibold flex items-center gap-1 dark:bg-rumble-dark dark:border border-rumble-green-dark text-white p-1 rounded-full w-[7rem] justify-center mb-3 text-[0.8rem]"
-          >
+            className="cursor-pointer bg-black mx-auto font-semibold flex items-center gap-1 dark:bg-rumble-dark dark:border border-rumble-green-dark text-white p-1 rounded-full w-[7rem] justify-center mb-3 text-[0.8rem]">
             Collapse
-            <ArrowDown2 size="16" color="white" variant="Bold" />
+            <ArrowDown2
+              size="16"
+              color="white"
+              variant="Bold"
+            />
           </div>
         }
         withCloseButton={false}
@@ -187,8 +186,7 @@ const Trending = () => {
           title: "!font-bold !text-2xl w-full",
           close: "!stroke-black dark:!stroke-white dark:hover:bg-rumble-dark",
           content: "dark:!bg-rumble-dark dark:text-white",
-        }}
-      >
+        }}>
         <div className="dark:bg-rumble-dark rounded-lg !p-2 lg:!p-5 mb-3 dark:text-white">
           <div>
             <Radio.Group
@@ -197,8 +195,7 @@ const Trending = () => {
               description=""
               classNames={{
                 label: "mb-3",
-              }}
-            >
+              }}>
               {sortBy.map((item) => (
                 <Radio
                   value={item}
@@ -221,8 +218,7 @@ const Trending = () => {
               description=""
               classNames={{
                 label: "mb-3",
-              }}
-            >
+              }}>
               {videoDate.map((item) => (
                 <Radio
                   value={item}
@@ -245,8 +241,7 @@ const Trending = () => {
               description=""
               classNames={{
                 label: "mb-3",
-              }}
-            >
+              }}>
               {duration.map((item) => (
                 <Radio
                   value={item}
@@ -269,8 +264,7 @@ const Trending = () => {
               description=""
               classNames={{
                 label: "mb-3",
-              }}
-            >
+              }}>
               {license.map((item) => (
                 <Radio
                   value={item}
@@ -292,10 +286,13 @@ const Trending = () => {
       <div className="w-full backdrop-blur-md p-3 bottom-0 fixed lg:hidden">
         <div
           onClick={open}
-          className="cursor-pointer bg-black mx-auto font-semibold flex items-center gap-1 dark:bg-rumble-dark dark:border border-rumble-green-dark text-white p-1 rounded-full w-[6rem] justify-center mb-3"
-        >
+          className="cursor-pointer bg-black mx-auto font-semibold flex items-center gap-1 dark:bg-rumble-dark dark:border border-rumble-green-dark text-white p-1 rounded-full w-[6rem] justify-center mb-3">
           Filters
-          <ArrowUp2 size="16" color="white" variant="Bold" />
+          <ArrowUp2
+            size="16"
+            color="white"
+            variant="Bold"
+          />
         </div>
       </div>
     </div>

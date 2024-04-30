@@ -1,8 +1,11 @@
+import NoHistory from "../../components/noHistory";
 
 const WahtchLater = () => {
   return (
-    <div>WahtchLater</div>
-  )
-}
+    <div>
+      <NoHistory title="Watch Later" />
+    </div>
+  );
+};
 
 export default WahtchLater;

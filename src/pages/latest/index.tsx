@@ -38,7 +38,7 @@ const Latest = () => {
               total={5}
               value={2}
               // onChange={}
-              color="#77b23b"
+              color="#003366"
               radius={"lg"}
               className="mt-5 w-full md:w-[50%] m-auto mb-4 sticky"
               classNames={{

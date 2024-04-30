@@ -21,7 +21,7 @@ const Upload = () => {
           <NavLink
             href="/upload-video"
             label="Upload video"
-            className={` hover:text-white text-sm dark:hover:bg-gray-700 hover:rounded-lg capitalize`}
+            className={` darkhover:text-white text-sm hover:!bg-gray-100 h-5 dark:hover:bg-gray-700 hover:rounded-lg capitalize`}
           />
         </Menu.Item>
         <Menu.Item>Go Live</Menu.Item>

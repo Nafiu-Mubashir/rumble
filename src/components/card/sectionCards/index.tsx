@@ -1,9 +1,8 @@
-import video from "../../../assets/video.jpeg";
+import video from '../../../assets/v1.png';
 import user from "../../../assets/user.png";
 import { useContext } from "react";
 import { SlideContext } from "../../../context/sidebarCtx";
 import { Dislike, Like1, Eye, Messages2 } from "iconsax-react";
-// import { Progress } from "@mantine/core";
 
 const SectionCards = ({
   status,

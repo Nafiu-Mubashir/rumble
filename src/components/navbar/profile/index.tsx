@@ -1,5 +1,6 @@
 import { Avatar, Menu } from "@mantine/core";
 import { Diagram, Video, Security, Brodcast, Setting2, Logout, Profile } from "iconsax-react";
+import { Link } from "react-router-dom";
 
 const UserProfile = () => {
   return (
@@ -26,7 +27,7 @@ const UserProfile = () => {
               className="stoke-black dark:stroke-white"
             />
           }>
-          Account Overview
+          <Link to={'/'}>Account Overview</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -36,7 +37,7 @@ const UserProfile = () => {
               className="stoke-black dark:stroke-white"
             />
           }>
-          Stats & Earnings
+          <Link to={'/'}>Stats & Earnings</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -46,7 +47,7 @@ const UserProfile = () => {
               className="stoke-black dark:stroke-white"
             />
           }>
-          My Content
+          <Link to={'/'}>My Content</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -56,7 +57,7 @@ const UserProfile = () => {
               className="stoke-black dark:stroke-white"
             />
           }>
-          My Channels
+          <Link to={'/'}>My Channels</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -66,7 +67,7 @@ const UserProfile = () => {
               className="stoke-black dark:stroke-white"
             />
           }>
-          Live Streaming
+          <Link to={'/'}>Live Streaming</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -76,7 +77,7 @@ const UserProfile = () => {
               className="stoke-black dark:stroke-white"
             />
           }>
-          Account Option
+          <Link to={'/'}>Account Option</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={

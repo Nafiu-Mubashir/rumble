@@ -10,8 +10,9 @@ import {
 import news from "../../assets/news.jpeg";
 import user from "../../assets/user.png";
 import { RecordCircle } from "iconsax-react";
-import { Divider, Tooltip, NavLink } from "@mantine/core";
+import { Divider, Tooltip } from "@mantine/core";
 import { useThemeCtx } from "../../context/themeCtx";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const { theme, setTheme } = useThemeCtx();
@@ -19,10 +20,10 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
     {
       icon: (
         <House2
-          size="18"
+          size="16"
           color=""
           variant="Bold"
-          className="stroke-black hover:text-stroke-white dark:stroke-white bloc"
+          className="stroke-black hover:text-stroke-white dark:stroke-white"
         />
       ),
       name: "home",
@@ -31,10 +32,10 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
     {
       icon: (
         <FolderOpen
-          size="18"
+          size="16"
           color=""
           variant="Bold"
-          className="stroke-black dark:stroke-white block mx-auto"
+          className="stroke-black dark:stroke-white"
         />
       ),
       name: "browse",
@@ -43,10 +44,10 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
     {
       icon: (
         <Award
-          size="18"
+          size="16"
           color=""
           variant="Bold"
-          className="stroke-black dark:stroke-white block mx-auto"
+          className="stroke-black dark:stroke-white"
         />
       ),
       name: "editor picks",
@@ -55,10 +56,10 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
     {
       icon: (
         <Diagram
-          size="18"
+          size="16"
           color=""
           variant="Bold"
-          className="stroke-black dark:stroke-white block mx-auto"
+          className="stroke-black dark:stroke-white"
         />
       ),
       name: "trending",
@@ -70,7 +71,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
           size="18"
           color=""
           variant="Bold"
-          className="stroke-black dark:stroke-white block mx-auto"
+          className="stroke-black dark:stroke-white"
         />
       ),
       name: "latest",
@@ -83,8 +84,8 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
       icon: (
         <svg
           className="main-menu-icon"
-          width="20"
-          height="20"
+          width="18"
+          height="18"
           viewBox="0 0 20 20"
           fill="currentColor">
           {" "}
@@ -108,8 +109,8 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
       icon: (
         <svg
           className="main-menu-icon"
-          width="20"
-          height="20"
+          width="17"
+          height="17"
           viewBox="0 0 20 20"
           fill="none"
           stroke="currentColor">
@@ -137,8 +138,8 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
       icon: (
         <svg
           className="main-menu-icon"
-          width="24"
-          height="24"
+          width="18"
+          height="18"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -215,23 +216,22 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
       <aside
         className={`${
           isOpen ? "w-[250px] block" : "w-[90px] hidden lg:block"
-        } lg:z-0 main-side bg-white border dark:bg-rumble-dark dark:text-white text-sm border-gray-300 dark:border-gray-700 text-black h-screen overflow-y-scroll `}>
-        <div className="p-3 mt-12 m-auto space-y-4">
+        } lg:z-0 main-side bg-white border dark:bg-rumble-dark dark:text-white text-center text-[12px] border-gray-300 dark:border-gray-700 text-black h-screen overflow-y-scroll `}>
+        <div className="p-3 mt-12 m-auto space-y-">
           <div className="py-3">
             <div
               className={`${
                 isOpen ? "items-start space-y-2 font-bold" : "items-center"
               } flex flex-col gap-4`}>
               {navLink.map(({ icon, name, link }, id) => (
-                <NavLink
+                <Link
                   key={id}
-                  href={link}
-                  label={name}
-                  leftSection={icon}
+                  to={link}
                   className={`${
-                    isOpen ? "flex-row" : "flex-col w-16"
-                  } flex hover:!bg-titan-blue hover:text-white !group dark:hover:bg-gray-700 hover:rounded-lg capitalize`}
-                />
+                    isOpen ? "flex-ro w-full p-2 gap-2" : "flex-col w-14"
+                  } flex items-center py-2 hover:bg-titan-blue hover:text-white group dark:hover:bg-gray-700 hover:rounded-lg capitalize`}>
+                  {icon} {name}
+                </Link>
               ))}
             </div>
           </div>
@@ -243,15 +243,14 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                 isOpen ? "items-start space-y-2 font-bold" : "items-center"
               } flex flex-col gap-4`}>
               {authRouts.map(({ icon, name, link }, id) => (
-                <NavLink
+                <Link
                   key={id}
-                  href={link}
-                  label={name}
-                  leftSection={icon}
+                  to={link}
                   className={`${
-                    isOpen ? "flex-row" : "flex-col w-16"
-                  } flex hover:!bg-titan-blue hover:text-white text-sm dark:hover:bg-gray-700 hover:rounded-lg capitalize`}
-                />
+                    isOpen ? "flex-row w-full p-2 gap-3" : "flex-col w-14"
+                  } flex items-center py-2 hover:bg-titan-blue hover:text-white group dark:hover:bg-gray-700 hover:rounded-lg capitalize`}>
+                  {icon} {name}
+                </Link>
               ))}
             </div>
           </div>
@@ -305,10 +304,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
                         className="w-[2rem] h-[2rem] rounded-full border-2 border-red-500"
                       />
                     </Tooltip>
-                    <p
-                      className={`${
-                        isOpen ? "block" : "hidden"
-                      } text-sm`}>
+                    <p className={`${isOpen ? "block" : "hidden"} text-sm`}>
                       {name}
                     </p>
                   </div>
