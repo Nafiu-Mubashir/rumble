@@ -10,6 +10,7 @@ export default {
         "rumble-dark": "#061726",
         "rumble-content-dark": "#000312",
         "titan-blue": "#003366",
+        "titan-red": "#EE6464",
       },
     },
   },

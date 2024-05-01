@@ -27,7 +27,7 @@ const UserProfile = () => {
               className="stoke-black dark:stroke-white"
             />
           }>
-          <Link to={'/'}>Account Overview</Link>
+          <Link to={'/account'}>Account Overview</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -37,7 +37,7 @@ const UserProfile = () => {
               className="stoke-black dark:stroke-white"
             />
           }>
-          <Link to={'/'}>Stats & Earnings</Link>
+          <Link to={'/statistics'}>Stats & Earnings</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={

@@ -1,9 +1,9 @@
-import { Grid } from "@mantine/core"
+// import { Grid } from "@mantine/core";
 
-const UserAccount = () => {
+const AccountVerification = () => {
   return (
     <div className="p-4 lg:p-8 dark:text-white">
-      <Grid
+      {/* <Grid
         justify="space-between"
         classNames={{
           root: "gap-3",
@@ -114,11 +114,11 @@ const UserAccount = () => {
           classNames={{
             col: "hidden lg:block",
           }}>
-          {/* child 2 */}
+          child 2
         </Grid.Col>
-      </Grid>
+      </Grid> */}
     </div>
   );
 }
 
-export default UserAccount
+export default AccountVerification
