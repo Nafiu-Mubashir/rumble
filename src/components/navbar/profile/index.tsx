@@ -1,6 +1,7 @@
-import { Avatar, Menu } from "@mantine/core";
-import { Diagram, Video, Security, Brodcast, Setting2, Logout, Profile } from "iconsax-react";
+import { Brodcast, Diagram, Logout, Profile, Security, Setting2, Video } from "iconsax-react";
 import { Link } from "react-router-dom";
+
+import { Avatar, Menu } from "@mantine/core";
 
 const UserProfile = () => {
   return (
@@ -77,7 +78,7 @@ const UserProfile = () => {
               className="stroke-black dark:stroke-white"
             />
           }>
-          <Link to={'/'}>Account Option</Link>
+          <Link to={'/account-option'}>Account Option</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
