@@ -1,4 +1,5 @@
-import { Grid } from "@mantine/core"
+import { Grid } from "@mantine/core";
+import SideTab from "../../components/sideTab";
 
 const UserAccount = () => {
   return (
@@ -9,7 +10,7 @@ const UserAccount = () => {
           root: "gap-3",
         }}>
         <Grid.Col
-          span={{ base: 12, md: 12, lg: 8 }}
+          span={{ base: 12, md: 12, lg: 9 }}
           classNames={{
             col: "",
           }}>
@@ -110,11 +111,11 @@ const UserAccount = () => {
           </Grid>
         </Grid.Col>
         <Grid.Col
-          span={{ base: 12, md: 12, lg: 4 }}
+          span={{ base: 12, md: 12, lg: 3 }}
           classNames={{
             col: "hidden lg:block",
           }}>
-          {/* child 2 */}
+          <SideTab />
         </Grid.Col>
       </Grid>
     </div>

@@ -1,14 +1,19 @@
+import "@mantine/core/styles.css";
+import "@mantine/core/styles.css";
+import "@mantine/carousel/styles.css";
+import "react-color-palette/css";
+
+import "./index.css";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import { RouterProvider } from "react-router-dom";
-import { router } from "./Router";
-import "@mantine/core/styles.css";
+
 import { MantineProvider } from "@mantine/core";
-import "@mantine/core/styles.css";
+
+import { router } from "./Router";
 import { SlideProvider } from "./context/sidebarCtx";
 import { ThemeProvider } from "./context/themeCtx";
-import "@mantine/carousel/styles.css";
 
 const Base = () => {
   // const { theme } = useThemeCtx();

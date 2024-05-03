@@ -239,13 +239,13 @@ const MobileSidebar = () => {
           }>
           <div className="p-3 mt-10 m-auto space-y-4">
             <div className="border-b py-3">
-              <div
-                className={`items-start space-y-2flex flex-col gap-4`}>
+              <div className={`items-start space-y-2flex flex-col gap-4`}>
                 {navLink.map(({ icon, name, link }, id) => (
                   <Link
                     key={id}
                     to={link}
-                    className={`flex py-2 gap-2 items-center dark:hover:bg-gray-700 hover:rounded-lg capitalize`}>
+                    className={`flex py-2 gap-2 items-center dark:hover:bg-gray-700 hover:rounded-lg capitalize`}
+                    onClick={close}>
                     {icon} {name}
                   </Link>
                 ))}
@@ -258,7 +258,8 @@ const MobileSidebar = () => {
                   <Link
                     key={id}
                     to={link}
-                    className={`flex py-2 gap-2 items-center dark:hover:bg-gray-700 hover:rounded-lg capitalize`}>
+                    className={`flex py-2 gap-2 items-center dark:hover:bg-gray-700 hover:rounded-lg capitalize`}
+                    onClick={close}>
                     {icon} {name}
                   </Link>
                 ))}
@@ -266,8 +267,7 @@ const MobileSidebar = () => {
             </div>
 
             <div className="w-full border-b py-3">
-              <h4
-                className={`text-left flex gap-2 text-[0.8rem] mb-4`}>
+              <h4 className={`text-left flex gap-2 text-[0.8rem] mb-4`}>
                 Featured <span className={``}>Channels</span>
               </h4>
 

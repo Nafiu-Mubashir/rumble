@@ -1,4 +1,5 @@
 import { Button, Grid, Tabs } from "@mantine/core";
+import SideTab from "../../components/sideTab";
 
 const Transaction = () => {
   return (
@@ -12,7 +13,7 @@ const Transaction = () => {
           root: "gap-3 py-4 lg:py-8",
         }}>
         <Grid.Col
-          span={{ base: 12, md: 12, lg: 8 }}
+          span={{ base: 12, md: 12, lg: 9 }}
           classNames={{
             col: "",
           }}>
@@ -128,11 +129,11 @@ const Transaction = () => {
           </Button>
         </Grid.Col>
         <Grid.Col
-          span={{ base: 12, md: 12, lg: 4 }}
+          span={{ base: 12, md: 12, lg: 3 }}
           classNames={{
             col: "hidden lg:block",
           }}>
-          {/* child 2 */}
+          <SideTab />
         </Grid.Col>
       </Grid>
     </div>

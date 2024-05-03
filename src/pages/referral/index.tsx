@@ -1,4 +1,5 @@
 import { Button, Grid } from "@mantine/core";
+import SideTab from "../../components/sideTab";
 
 const Referral = () => {
   return (
@@ -9,7 +10,7 @@ const Referral = () => {
           root: "gap-3",
         }}>
         <Grid.Col
-          span={{ base: 12, md: 12, lg: 8 }}
+          span={{ base: 12, md: 12, lg: 9 }}
           classNames={{
             col: "",
           }}>
@@ -122,11 +123,11 @@ const Referral = () => {
           </Grid>
         </Grid.Col>
         <Grid.Col
-          span={{ base: 12, md: 12, lg: 4 }}
+          span={{ base: 12, md: 12, lg: 3 }}
           classNames={{
             col: "hidden lg:block",
           }}>
-          {/* child 2 */}
+          <SideTab />
         </Grid.Col>
       </Grid>
     </div>

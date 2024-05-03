@@ -24,7 +24,7 @@ const UserProfile = () => {
             <Profile
               size="20"
               color=""
-              className="stoke-black dark:stroke-white"
+              className="stroke-black dark:stroke-white"
             />
           }>
           <Link to={'/account'}>Account Overview</Link>
@@ -34,7 +34,7 @@ const UserProfile = () => {
             <Diagram
               size="20"
               color=""
-              className="stoke-black dark:stroke-white"
+              className="stroke-black dark:stroke-white"
             />
           }>
           <Link to={'/statistics'}>Stats & Earnings</Link>
@@ -44,7 +44,7 @@ const UserProfile = () => {
             <Video
               size="20"
               color=""
-              className="stoke-black dark:stroke-white"
+              className="stroke-black dark:stroke-white"
             />
           }>
           <Link to={'/'}>My Content</Link>
@@ -54,7 +54,7 @@ const UserProfile = () => {
             <Security
               size="20"
               color=""
-              className="stoke-black dark:stroke-white"
+              className="stroke-black dark:stroke-white"
             />
           }>
           <Link to={'/'}>My Channels</Link>
@@ -64,7 +64,7 @@ const UserProfile = () => {
             <Brodcast
               size="20"
               color=""
-              className="stoke-black dark:stroke-white"
+              className="stroke-black dark:stroke-white"
             />
           }>
           <Link to={'/'}>Live Streaming</Link>
@@ -74,7 +74,7 @@ const UserProfile = () => {
             <Setting2
               size="20"
               color=""
-              className="stoke-black dark:stroke-white"
+              className="stroke-black dark:stroke-white"
             />
           }>
           <Link to={'/'}>Account Option</Link>
@@ -84,7 +84,7 @@ const UserProfile = () => {
             <Logout
               size="20"
               color=""
-              className="stoke-black dark:stroke-white"
+              className="stroke-black dark:stroke-white"
             />
           }>
           Sign Out

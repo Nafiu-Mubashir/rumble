@@ -1,5 +1,4 @@
 import {
-  Anchor,
   Button,
   Checkbox,
   NumberInput,
@@ -7,6 +6,7 @@ import {
   Select,
   TextInput,
 } from "@mantine/core";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   return (
@@ -214,19 +214,17 @@ const Registration = () => {
               Website Terms and Conditions of Use and Agency Agreement and Titan
               Privacy Policy, respectively. Titan Website Terms and Conditions
               of Use and Agency Agreement can be found here:
-              <Anchor
-                href="https://titan.com/s/terms"
-                className="px-1"
-                fz={"md"}>
+              <Link
+                to="https://titan.com/s/terms"
+                className="px-1">
                 https://titan.com/s/terms
-              </Anchor>
+              </Link>
               , and Titan Privacy Policy can be found here:
-              <Anchor
-                href="https://titan.com/s/privacy"
-                className="px-1"
-                fz={"md"}>
+              <Link
+                to="https://titan.com/s/privacy"
+                className="px-1">
                 https://titan.com/s/privacy
-              </Anchor>
+              </Link>
               .
             </>
           }
