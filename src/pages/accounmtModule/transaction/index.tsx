@@ -1,5 +1,6 @@
 import { Button, Grid, Tabs } from "@mantine/core";
-import SideTab from "../../components/sideTab";
+
+import SideTab from "../../../components/sideTab";
 
 const Transaction = () => {
   return (

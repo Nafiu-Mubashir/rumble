@@ -4,7 +4,7 @@ import { ColorPicker, useColor } from "react-color-palette";
 
 import { Button, Divider, Grid, Menu } from "@mantine/core";
 
-import SideTab from "../../components/sideTab";
+import SideTab from "../../../components/sideTab";
 
 const ChatSettings = () => {
   const [color, setColor] = useColor("rgb(86 30 203)");

@@ -1,5 +1,6 @@
 import { Grid, Select } from "@mantine/core";
-import SideTab from "../../components/sideTab";
+
+import SideTab from "../../../components/sideTab";
 
 const Statistics = () => {
   return (
@@ -116,9 +117,7 @@ const Statistics = () => {
               span={{ base: 12, sm: 12, lg: 8 }}
               className="p-3 space-y-1">
               <div className="flex items-center justify-between">
-                <h1 className="text-lg text-gray-500 font-semibold">
-                  Graph
-                </h1>
+                <h1 className="text-lg text-gray-500 font-semibold">Graph</h1>
                 <Select
                   classNames={{
                     root: "w-[45%] md:w-[18%] lg:w-[24%]",
@@ -151,6 +150,6 @@ const Statistics = () => {
       </Grid>
     </div>
   );
-}
+};
 
-export default Statistics
+export default Statistics;

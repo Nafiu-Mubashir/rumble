@@ -1,5 +1,6 @@
 import { Button, Grid } from "@mantine/core";
-import SideTab from "../../components/sideTab";
+
+import SideTab from "../../../components/sideTab";
 
 const Referral = () => {
   return (
@@ -70,8 +71,16 @@ const Referral = () => {
                 <div className="flex items-center gap-2">
                   Export:
                   <div>
-                    <Button className='!bg-titan-blue' radius={0}>CSV</Button>
-                    <Button className='!bg-titan-blue' radius={0}>JSON</Button>
+                    <Button
+                      className="!bg-titan-blue"
+                      radius={0}>
+                      CSV
+                    </Button>
+                    <Button
+                      className="!bg-titan-blue"
+                      radius={0}>
+                      JSON
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -132,6 +141,6 @@ const Referral = () => {
       </Grid>
     </div>
   );
-}
+};
 
-export default Referral
+export default Referral;

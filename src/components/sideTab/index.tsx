@@ -40,7 +40,7 @@ const SideTab = () => {
   const streams = [
     {
       name: "Live Streams",
-      link: "/",
+      link: "/live-streaming",
     },
     {
       name: "Template",

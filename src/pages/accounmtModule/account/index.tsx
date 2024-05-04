@@ -1,5 +1,6 @@
 import { Grid } from "@mantine/core";
-import SideTab from "../../components/sideTab";
+
+import SideTab from "../../../components/sideTab";
 
 const UserAccount = () => {
   return (
@@ -120,6 +121,6 @@ const UserAccount = () => {
       </Grid>
     </div>
   );
-}
+};
 
-export default UserAccount
+export default UserAccount;

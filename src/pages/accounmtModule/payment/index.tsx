@@ -1,6 +1,6 @@
 import { Grid } from "@mantine/core";
 
-import SideTab from "../../components/sideTab";
+import SideTab from "../../../components/sideTab";
 
 const Payments = () => {
   return (
@@ -21,9 +21,7 @@ const Payments = () => {
                 <tr>
                   <th
                     scope="col"
-                    className="px-6 py-3">
-                    
-                  </th>
+                    className="px-6 py-3"></th>
                   <th
                     scope="col"
                     className="px-6 py-3">
@@ -78,6 +76,6 @@ const Payments = () => {
       </Grid>
     </div>
   );
-}
+};
 
-export default Payments
+export default Payments;

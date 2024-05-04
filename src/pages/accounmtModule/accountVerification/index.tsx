@@ -1,6 +1,6 @@
 import { Button, Grid, NumberInput, Select } from "@mantine/core";
 
-import SideTab from "../../components/sideTab";
+import SideTab from "../../../components/sideTab";
 
 const AccountVerification = () => {
   const features = [
@@ -232,6 +232,6 @@ const AccountVerification = () => {
       </Grid>
     </div>
   );
-}
+};
 
-export default AccountVerification
+export default AccountVerification;

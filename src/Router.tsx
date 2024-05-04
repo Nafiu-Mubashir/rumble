@@ -1,22 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Root from "./App";
-import UserAccount from "./pages/account";
+import UserAccount from "./pages/accounmtModule/account";
+import AccountVerification from "./pages/accounmtModule/accountVerification";
+import ChatSettings from "./pages/accounmtModule/chatSettings";
+import Payments from "./pages/accounmtModule/payment";
+import Referral from "./pages/accounmtModule/referral";
+import Statistics from "./pages/accounmtModule/statistics";
+import Transaction from "./pages/accounmtModule/transaction";
 import AccountOption from "./pages/accountOption";
-import AccountVerification from "./pages/accountVerification";
 import Browse from "./pages/browse";
 import Category from "./pages/catgory";
-import ChatSettings from "./pages/chatSettings";
 import EditorPicks from "./pages/editorPicks";
 import Home from "./pages/home";
 import Latest from "./pages/latest";
 import Library from "./pages/library";
-import Payments from "./pages/payment";
-import Referral from "./pages/referral";
+import LiveStreaming from "./pages/liveStreamingModule";
 import Registration from "./pages/registration";
 import SingleVideos from "./pages/singleVideo";
-import Statistics from "./pages/statistics";
-import Transaction from "./pages/transaction";
 import Trending from "./pages/trending";
 import UploadVideo from "./pages/uploadVideo";
 import WatchHistory from "./pages/watchHistory";
@@ -102,6 +103,10 @@ export const router = createBrowserRouter([
       {
         path: "referral",
         element: <Referral />,
+      },
+      {
+        path: "live-streaming",
+        element: <LiveStreaming />,
       },
       {
         path: "registration",
