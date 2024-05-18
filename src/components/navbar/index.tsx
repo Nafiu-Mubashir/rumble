@@ -1,14 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
-import Button from "../button";
 import { HambergerMenu } from "iconsax-react";
-import Login from "../login";
+import React, { useEffect, useRef, useState } from "react";
+
 import logo from "../../../public/titan-dark.png";
 import darkLogo from "../../../public/titan-white.png";
-import MobileSidebar from "../sidebar/mobileSidebar";
 import { useThemeCtx } from "../../context/themeCtx";
+import Button from "../button";
+import Login from "../login";
+import MobileSidebar from "../sidebar/mobileSidebar";
 import Notifications from "./notification";
-import Upload from "./upload";
 import UserProfile from "./profile";
+import Upload from "./upload";
 
 interface NavbarProps {
   toggleSidebar: () => void;
@@ -56,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           <img
             src={theme === "light" ? logo : darkLogo}
             alt=""
-            className="h-5 md:h-8 lg:h-6 w-full"
+            className="h-5 md:h-8 lg:h-6 object-contain"
           />
         </div>
         <div
