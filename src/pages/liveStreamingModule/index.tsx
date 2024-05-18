@@ -1,6 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { useLocation, useNavigate } from "react-router-dom";
-
 import { Button, Grid, Tabs } from "@mantine/core";
 
 import SideTab from "../../components/sideTab";
@@ -11,26 +8,13 @@ import StaticURL from "./staticURL";
 import Template from "./template";
 
 const LiveStreaming = () => {
-  // const [activeTab, setActiveTab] = useState<string | null>("live-stream");
-
-  // const base = "/live-streaming/";
-  // const location = useLocation();
-  // const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   if (location.pathname.includes(base + "streams")) {
-  //     setActiveTab("live-stream");
-  //   } else {
-  //     setActiveTab("template");
-  //   }
-  // }, [location]);
   return (
     <div className="p-4  dark:text-white">
       <h1 className="text-xl font-semibold text-titan-blue">LIVE STREAMS</h1>
       <Grid
         justify="space-between"
         classNames={{
-          root: "gap-3 py-4 lg:py-8",
+          root: "gap-3 py-4 lg:py-8 md:p-4 lg:p-6",
         }}>
         <Grid.Col
           span={{ base: 12, md: 12, lg: 9 }}
@@ -70,15 +54,10 @@ const LiveStreaming = () => {
             color="#003366"
             defaultValue={"live-stream"}
             // value={activeTab}
-            // keepMounted={true}
+            keepMounted={true}
             // onChange={(value) => {
             //   setActiveTab(value);
-            //   if (value === "rep") {
-            //     !location.pathname.includes(base + "streams") &&
-            //       navigate(`${base + "streams"}`);
-            //   } else {
-            //     navigate(base);
-            //   }
+
             // }}
             classNames={{
               panel: "",
@@ -87,10 +66,10 @@ const LiveStreaming = () => {
               tab: "hover:bg-gray-200 dark:hover:!bg-rumble-dark",
             }}>
             <Tabs.List>
-              <Tabs.Tab value="live-stream">Live Stream</Tabs.Tab>
+              <Tabs.Tab value={"live-stream"}>Live Streams</Tabs.Tab>
               <Tabs.Tab value="template">Template</Tabs.Tab>
-              <Tabs.Tab value="static-stream-key">Statcic Stream Key</Tabs.Tab>
-              <Tabs.Tab value="static-urls">Static URLs</Tabs.Tab>
+              <Tabs.Tab value="static-stream-key">Static Stream Key</Tabs.Tab>
+              <Tabs.Tab value="static-urls">Static URL</Tabs.Tab>
               <Tabs.Tab value="api">API</Tabs.Tab>
             </Tabs.List>
 
@@ -135,6 +114,6 @@ const LiveStreaming = () => {
       </Grid>
     </div>
   );
-}
+};
 
-export default LiveStreaming
+export default LiveStreaming;

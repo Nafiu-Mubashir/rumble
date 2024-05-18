@@ -16,7 +16,7 @@ const UserInfo = () => {
   // };
 
   return (
-    <>
+    <form>
       <div>
         <div className="full">
           <label
@@ -171,7 +171,7 @@ const UserInfo = () => {
           </Button>
         </div>
       </div>
-    </>
+    </form>
   );
 };
 

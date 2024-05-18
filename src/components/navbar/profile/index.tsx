@@ -28,7 +28,7 @@ const UserProfile = () => {
               className="stroke-black dark:stroke-white"
             />
           }>
-          <Link to={'/account'}>Account Overview</Link>
+          <Link to={"/account"}>Account Overview</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -38,7 +38,7 @@ const UserProfile = () => {
               className="stroke-black dark:stroke-white"
             />
           }>
-          <Link to={'/statistics'}>Stats & Earnings</Link>
+          <Link to={"/statistics"}>Stats & Earnings</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -48,7 +48,7 @@ const UserProfile = () => {
               className="stroke-black dark:stroke-white"
             />
           }>
-          <Link to={'/'}>My Content</Link>
+          <Link to={"/"}>My Content</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -58,7 +58,7 @@ const UserProfile = () => {
               className="stroke-black dark:stroke-white"
             />
           }>
-          <Link to={'/'}>My Channels</Link>
+          <Link to={"/my-channel"}>My Channels</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -68,7 +68,7 @@ const UserProfile = () => {
               className="stroke-black dark:stroke-white"
             />
           }>
-          <Link to={'/'}>Live Streaming</Link>
+          <Link to={"/live-streaming"}>Live Streaming</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={
@@ -78,7 +78,7 @@ const UserProfile = () => {
               className="stroke-black dark:stroke-white"
             />
           }>
-          <Link to={'/account-option'}>Account Option</Link>
+          <Link to={"/account-option"}>Account Option</Link>
         </Menu.Item>
         <Menu.Item
           leftSection={

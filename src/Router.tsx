@@ -11,15 +11,29 @@ import Transaction from "./pages/accounmtModule/transaction";
 import AccountOption from "./pages/accountOption";
 import Browse from "./pages/browse";
 import Category from "./pages/catgory";
+import Emotes from "./pages/channelsModule/Emotes";
+import CreateChannel from "./pages/channelsModule/createChannel";
+import FollowedChannel from "./pages/channelsModule/followedChannel";
+import MyChannel from "./pages/channelsModule/myChannel";
 import EditorPicks from "./pages/editorPicks";
 import Home from "./pages/home";
 import Latest from "./pages/latest";
 import Library from "./pages/library";
 import LiveStreaming from "./pages/liveStreamingModule";
+import BlockWordPhrase from "./pages/modrationModule/blockAndWordPhrase";
+import ChatMuting from "./pages/modrationModule/chatMuting";
+import Modrators from "./pages/modrationModule/modrators";
 import Registration from "./pages/registration";
 import SingleVideos from "./pages/singleVideo";
 import Trending from "./pages/trending";
 import UploadVideo from "./pages/uploadVideo";
+import AllVideos from "./pages/videoModule/allVideos";
+import MonitizedVideos from "./pages/videoModule/monitizedVideo";
+import PeerPerView from "./pages/videoModule/perPerView";
+import PolicyViolation from "./pages/videoModule/policyViolation";
+import RecurringSubs from "./pages/videoModule/recurringSubs";
+import ScheduleVidoes from "./pages/videoModule/scheduleVideo";
+import Syndication from "./pages/videoModule/syndication";
 import WatchHistory from "./pages/watchHistory";
 import WahtchLater from "./pages/watchLater";
 
@@ -107,6 +121,62 @@ export const router = createBrowserRouter([
       {
         path: "live-streaming",
         element: <LiveStreaming />,
+      },
+      {
+        path: "create-channel",
+        element: <CreateChannel />,
+      },
+      {
+        path: "my-channel",
+        element: <MyChannel />,
+      },
+      {
+        path: "emotes",
+        element: <Emotes />,
+      },
+      {
+        path: "followed-channel",
+        element: <FollowedChannel />,
+      },
+      {
+        path: "muted-user",
+        element: <ChatMuting />,
+      },
+      {
+        path: "modrators",
+        element: <Modrators />,
+      },
+      {
+        path: "block-word-phrase",
+        element: <BlockWordPhrase />,
+      },  
+      {
+        path: "auto-syndication",
+        element: <Syndication />,
+      },
+      {
+        path: "peer-per-view",
+        element: <PeerPerView />,
+      },
+      {
+        path: "recurring-subs",
+        element: <RecurringSubs />,
+      },
+      {
+        path: "all-videos",
+        element: <AllVideos />,
+      },
+      {
+        path: "schedule-video",
+        element: <ScheduleVidoes />,
+      },
+      {
+        path: "monitized-video",
+        element: <MonitizedVideos />,
+      },
+      {
+        path: "policy-violation",
+        element: <PolicyViolation />,
       },
       {
         path: "registration",

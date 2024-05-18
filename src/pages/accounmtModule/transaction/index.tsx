@@ -11,7 +11,7 @@ const Transaction = () => {
       <Grid
         justify="space-between"
         classNames={{
-          root: "gap-3 py-4 lg:py-8",
+          root: "gap-3 py-4 lg:py-8 md:p-4 lg:p-6",
         }}>
         <Grid.Col
           span={{ base: 12, md: 12, lg: 9 }}

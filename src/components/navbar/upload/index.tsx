@@ -1,6 +1,7 @@
-import { Menu } from "@mantine/core";
 import { Video } from "iconsax-react";
 import { Link } from "react-router-dom";
+
+import { Menu } from "@mantine/core";
 
 const Upload = () => {
   return (
@@ -21,7 +22,7 @@ const Upload = () => {
         <Menu.Item>
           <Link
             to="/upload-video"
-            className={` darkhover:text-white text-sm hover:!bg-gray-100 h-5 dark:hover:bg-gray-700 hover:rounded-lg capitalize`}>
+            className={` darkhover:text-white text-sm hover:!bg-gray-100 h-5 dark:hoverw:!bg-gray-700 hover:rounded-lg capitalize`}>
             Upload video
           </Link>
         </Menu.Item>

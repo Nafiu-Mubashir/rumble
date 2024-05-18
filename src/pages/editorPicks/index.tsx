@@ -1,7 +1,6 @@
-import { useDisclosure } from "@mantine/hooks";
-import SectionHeader from "../../components/sectionsHeader";
 import { Modal, Pagination, Radio } from "@mantine/core";
-import VideoCard from "../../components/card/videoCard";
+import { useDisclosure } from "@mantine/hooks";
+
 import v1 from "../../assets/v1.png";
 import v2 from "../../assets/v2.png";
 import v3 from "../../assets/v3.png";
@@ -9,6 +8,8 @@ import v4 from "../../assets/v4.png";
 import v6 from "../../assets/v6.png";
 import v7 from "../../assets/v7.png";
 import v8 from "../../assets/v8.png";
+import VideoCard from "../../components/card/videoCard";
+import SectionHeader from "../../components/sectionsHeader";
 
 const EditorPicks = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -190,12 +191,12 @@ const EditorPicks = () => {
           total={5}
           value={2}
           // onChange={}
-          color="#003366"
+          color="#"
           radius={"lg"}
           className="mt-5 w-full md:w-[50%] m-auto mb-4 sticky"
           classNames={{
             // control: 'dark:bg-rumble-dark dark:text-white dark:hover:bg-rumble-dark',
-            dots: "dark:text-white",
+            dots: "d",
           }}
         />
       </div>

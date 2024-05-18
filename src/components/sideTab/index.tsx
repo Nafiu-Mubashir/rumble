@@ -40,7 +40,7 @@ const SideTab = () => {
   const streams = [
     {
       name: "Live Streams",
-      link: "/live-streaming",
+      link: "/live-streams",
     },
     {
       name: "Template",
@@ -62,63 +62,63 @@ const SideTab = () => {
   const videos = [
     {
       name: "Auto Syndication",
-      link: "/",
+      link: "/auto-syndication",
     },
     {
       name: "Peer-Per-View",
-      link: "/",
+      link: "/peer-per-view",
     },
     {
       name: "Recurring Subs",
-      link: "/",
+      link: "/recurring-subs",
     },
     {
       name: "All Videos",
-      link: "/",
+      link: "/all-videos",
     },
     {
       name: "Schedule Videos",
-      link: "/",
+      link: "/schedule-video",
     },
     {
       name: "Monetized Videos",
-      link: "/",
+      link: "/monitized-video",
     },
     {
       name: "Policy Violations",
-      link: "/",
+      link: "/policy-violation",
     },
   ];
   const channels = [
     {
       name: "Create Channel",
-      link: "/",
+      link: "/create-channel",
     },
     {
       name: "My Channels",
-      link: "/",
+      link: "/my-channel",
     },
     {
       name: "Emotes",
-      link: "/",
+      link: "/emotes",
     },
     {
       name: "Followed Channel",
-      link: "/",
+      link: "/followed-channel",
     },
   ];
   const modration = [
     {
       name: "Chat/Comment Muting",
-      link: "/",
+      link: "/muted-user",
     },
     {
       name: "Moderators",
-      link: "/",
+      link: "/modrators",
     },
     {
       name: "Blocked Words And Phrase",
-      link: "/",
+      link: "/block-word-phrase",
     },
   ];
   const features = [
@@ -155,10 +155,10 @@ const SideTab = () => {
 
   return (
     <div className="px-5 space-y-2">
-      <div className="border px-3 py-1 text-center text-xl bg-white dark:bg-gray-500 dark:text-white dark:border-gray-500">
+      <div className="border px-3 py-1 text-center text-xl bg-white dark:bg-rumble-dark dark:text-white dark:border-gray-600">
         Username
       </div>
-      <div className="border text-cente text-sm bg-white dark:bg-gray-500 dark:text-white dark:border-gray-500 space-y-3 capitalize">
+      <div className="border text-cente text-sm bg-white dark:bg-rumble-dark dark:text-white dark:border-gray-600 space-y-3 capitalize">
         <div className="w-full">
           {accounts.map(({ name, link }, id) => (
             <NavLink
