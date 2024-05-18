@@ -40,23 +40,23 @@ const SideTab = () => {
   const streams = [
     {
       name: "Live Streams",
-      link: "/live-streams",
+      link: "/live-streaming",
     },
     {
       name: "Template",
-      link: "/",
+      link: "/live-streaming",
     },
     {
       name: "Static Stream Key",
-      link: "/",
+      link: "/live-streaming",
     },
     {
       name: "Static Video URLs",
-      link: "/",
+      link: "/live-streaming",
     },
     {
       name: "Live Streaming API",
-      link: "/",
+      link: "/live-streaming",
     },
   ];
   const videos = [
