@@ -22,9 +22,9 @@ const Trending = () => {
             fill="none">
             <g
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2">
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2">
               <path d="m19.167 5-7.917 7.917L7.083 8.75.833 15"></path>
               <path d="M14.167 5h5v5"></path>
             </g>

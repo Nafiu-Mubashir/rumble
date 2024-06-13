@@ -4,6 +4,9 @@ import { Modal, Input, PasswordInput } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Button from "../button";
 import { Apple, Facebook, Google } from "iconsax-react";
+import { useFormik } from "formik";
+import validationSchema from "./Validation/validationSchema";
+
 
 const Login = () => {
   const loginOptions = [
@@ -21,6 +24,18 @@ const Login = () => {
     },
   ];
   const [opened, { open, close }] = useDisclosure(false);
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: ''
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      console.log('Sign in values', values);
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   return (
     <>
@@ -42,31 +57,41 @@ const Login = () => {
           content: 'dark:!bg-rumble-dark dark:text-white'
         }}
       >
-        <div className="w-full space-y-4">
+       
+         <form onSubmit={formik.handleSubmit} className="w-full space-y-4">
           <p className="text-[0.9rem] text-center lg:text-left">
             If you have a Rumble account, please enter your credentials.
           </p>
 
           <Input
             placeholder="Email or Username"
+            name="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
             classNames={{
-              input: "border-gray-200 focus:ring-gray-200 focus:border-gray-200 dark:bg-gray-700 dark:border-none",
+              input: "border-gray-200 focus:ring-gray-200 focus:border-gray-200 dark:bg-gray-700 dark:border-none dark:text-white",
             }}
             size="md"
             radius={0}
+            error={formik.touched.email && formik.errors.email}
           />
           <PasswordInput
             placeholder="Password"
+            name="password"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.password}
             classNames={{
-              input: "border-gray-200 focus:ring-gray-200 focus:border-gray-200 dark:bg-gray-700 dark:border-none",
-              innerInput:
-                "border-gray-200 focus:ring-none focus:border-gray-200",
+              input: "border-gray-200 focus:ring-gray-200 focus:border-gray-200 dark:bg-gray-700 dark:border-none dark:text-white",
+              innerInput: "border-gray-200 focus:ring-none focus:border-gray-200",
             }}
             size="md"
             radius={0}
+            error={formik.touched.password && formik.errors.password}
           />
           <div className="flex gap-3 justify-center items-center border-b dark:border-gray-700 py-2 lg:p-4">
-            <Button value="Sign in" classes="bg-blue-500 py-3 px-5 dark:bg-gray-300 dark:text-black text-white" />
+            <Button type="submit" value="Sign in" classes="bg-blue-500 hover:bg-blue-600 py-3 px-5 dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-black text-white" />
             <a href="/" className="font-semi-bold">
               Forgot your password?
             </a>
@@ -92,7 +117,7 @@ const Login = () => {
               Create one now!
             </a>
           </div>
-        </div>
+        </form>
       </Modal>
 
       <Button

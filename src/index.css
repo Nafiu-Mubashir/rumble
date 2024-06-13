@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 *,
 *::after,
@@ -72,6 +78,14 @@
 }
 .main-nav.blue {
   background-color: blue;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  background-color: #4b5563 !important; 
+  color: #ffffff !important; /* Ensures text color is readable in dark mode */
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
 }
 
 /* Media queries for responsiveness */

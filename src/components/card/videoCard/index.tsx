@@ -65,9 +65,9 @@ const VideoCard = ({status, videoLink, category}: CardProps) => {
                       viewBox="0 0 24 25"
                       fill="white"
                       stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round">
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round">
                       {" "}
                       <path d="M3 12.7383h7"></path>
                       <path
@@ -127,7 +127,7 @@ const VideoCard = ({status, videoLink, category}: CardProps) => {
                     viewBox="0 0 23 24">
                     <path
                       fill=""
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M21.2 16a5.7 5.7 0 0 0 0-7.9A28.3 28.3 0 0 0 7.5.1 5.3 5.3 0 0 0 1.3 4 29 29 0 0 0 1 20.3a5.4 5.4 0 0 0 6.4 3.5A27 27 0 0 0 21.1 16Zm-6.5-6.3a1 1 0 0 0-1.4-1.4L8.5 13l-1.8-1.8a1 1 0 0 0-1.4 1.4l2.5 2.5c.4.4 1 .4 1.4 0l5.5-5.5Z"></path>
                   </svg>
                 </div>
@@ -150,9 +150,9 @@ const VideoCard = ({status, videoLink, category}: CardProps) => {
                 fill="currentColor">
                 {" "}
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M13.5 6.00012c0 .82843-.6716 1.5-1.5 1.5s-1.5-.67157-1.5-1.5.6716-1.5 1.5-1.5 1.5.67157 1.5 1.5Zm0 5.99998c0 .8284-.6716 1.5-1.5 1.5s-1.5-.6716-1.5-1.5.6716-1.5 1.5-1.5 1.5.6716 1.5 1.5Zm-1.5 7.5c.8284 0 1.5-.6716 1.5-1.5s-.6716-1.5-1.5-1.5-1.5.6716-1.5 1.5.6716 1.5 1.5 1.5Z"
-                  clip-rule="evenodd"></path>
+                  clipRule="evenodd"></path>
               </svg>
             </div>
           </div>
