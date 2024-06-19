@@ -2,7 +2,7 @@ import logo from "../../assets/rumble-full-logo.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-white dark:bg-rumble-dark dark:text-white p-4 flex flex-col md:flex-row lg:flex-row gap-5 lg:gap-10 container m-auto text-[0.8rem]">
+    <div className=" bg-white dark:bg-rumble-dark dark:text-white p-4 flex flex-col md:flex-row lg:flex-row gap-5 lg:gap-10 container m-auto text-[0.8rem]">
       <img
         src={logo}
         alt=""

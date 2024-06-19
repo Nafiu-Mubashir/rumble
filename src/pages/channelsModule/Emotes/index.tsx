@@ -5,9 +5,14 @@ import { Grid } from "@mantine/core";
 import SideTab from "../../../components/sideTab";
 
 const Emotes = () => {
+
+  const dottedDivs = Array.from({ length: 45 }, (_, index) => (
+    <div key={index} className="border-2 border-dotted h-[80px]"></div>
+  ));
+
   return (
-    <div className="p-4 dark:text-white">
-      <h1 className="text-xl font-semibold text-titan-blue uppercase">
+    <div className="p-4 py-8 dark:text-white">
+      <h1 className="text-xl font-semibold text-titan-blue dark:text-white uppercase">
         EMOTES
       </h1>
       <Grid
@@ -54,16 +59,7 @@ const Emotes = () => {
                 </svg>
               </div>
               <div className="grid grid-cols-3 md:grid-cols-7 gap-3 lg:grid-cols-9">
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
+              {dottedDivs}
               </div>
             </div>
 

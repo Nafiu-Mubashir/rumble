@@ -34,7 +34,8 @@ const Registration = () => {
     onSubmit: (values) => {
       console.log('Registration values', values);
       // alert(JSON.stringify(values, null, 2));
-      navigate('/registration-success');
+      // navigate('/registration-success');
+      navigate('/registration/registration-success');
     },
   });
 

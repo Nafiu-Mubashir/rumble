@@ -1,5 +1,5 @@
 import { Button, Grid, Tabs } from "@mantine/core";
-
+import { useNavigate, useLocation } from "react-router-dom";
 import SideTab from "../../components/sideTab";
 import API from "./api";
 import LiveStreams from "./liveStreams";
@@ -8,9 +8,18 @@ import StaticURL from "./staticURL";
 import Template from "./template";
 
 const LiveStreaming = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleTabChange = (value: string | null) => {
+    if (value) {
+      navigate(`/live-streaming?tab=${value}`);
+    }
+  };
+
   return (
     <div className="p-4  dark:text-white">
-      <h1 className="text-xl font-semibold text-titan-blue">LIVE STREAMS</h1>
+      <h1 className="text-xl font-semibold text-titan-blue dark:text-white">LIVE STREAMS</h1>
       <Grid
         justify="space-between"
         classNames={{
@@ -51,14 +60,18 @@ const LiveStreaming = () => {
             </Button>
           </div>
           <Tabs
-            color="#003366"
-            defaultValue={"live-stream"}
-            // value={activeTab}
-            keepMounted={true}
-            // onChange={(value) => {
-            //   setActiveTab(value);
+            // color="#003366"
+            // defaultValue={"live-stream"}
+            // // value={activeTab}
+            // keepMounted={true}
+            // // onChange={(value) => {
+            // //   setActiveTab(value);
 
-            // }}
+            // // }}
+            color="#003366"
+            value={location.pathname.split('/').pop()}
+            keepMounted={true}
+            onChange={handleTabChange}
             classNames={{
               panel: "",
               tabLabel: "lg:text-[1.2rem]",

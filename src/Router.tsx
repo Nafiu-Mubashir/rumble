@@ -180,27 +180,33 @@ export const router = createBrowserRouter([
         path: "policy-violation",
         element: <PolicyViolation />,
       },
-      {
-        path: "registration",
-        element: <Registration />,
-      },
-      {
-        path: "registration-verification-success",
-        element: <RegistrationVerification />,
-      },
-      {
-        path: "registration-success",
-        element: <SuccessfulRegistration />,
-      },
-      
       // {
       //   path: "registration",
       //   element: <Registration />,
-      //   children: [
-      //     { index: true, element: <Registration /> },
-      //     { path: "success", element: <SuccessfulRegistration /> },
-      //   ],
       // },
+      // {
+      //   path: "registration-verification-success",
+      //   element: <RegistrationVerification />,
+      // },
+      // {
+      //   path: "registration-success",
+      //   element: <SuccessfulRegistration />,
+      // },
+      {
+        path: "registration",
+        element: <Registration />,
+        children: [
+          {
+            path: "registration-verification-success",
+            element: <RegistrationVerification />,
+          },
+          {
+            path: "/registration/registration-success",
+            element: <SuccessfulRegistration />,
+          },
+        ],
+      },
+      
     ],
   },
 ]);

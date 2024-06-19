@@ -16,8 +16,8 @@ const FollowedChannel = () => {
             col: "",
           }}
           className="space-y-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold text-titan-blue uppercase">
+          <div className="flex justify-between items-center text-titan-blue dark:text-white">
+            <h1 className="text-xl font-semibold uppercase">
               FOLLOWED CHANNELS
             </h1>
             <div className="bg-titan-blue px-4 py-2 text-white">
@@ -71,7 +71,7 @@ const FollowedChannel = () => {
             </table>
           </div>
 
-          <h1 className="text-xl font-semibold text-titan-blue uppercase">
+          <h1 className="text-xl font-semibold text-titan-blue dark:text-white uppercase ">
             CATEGORIES
           </h1>
           <div className="relative overflow-x-auto shadow-md">
