@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 import { Avatar, Menu } from "@mantine/core";
 
 const UserProfile = () => {
+  const handleSignOut = () => {
+    localStorage.clear();  // Clear all localStorage items
+    // history.push('/'); 
+    window.location.reload(); 
+  }
+
   return (
     <Menu
       classNames={{
@@ -81,6 +87,7 @@ const UserProfile = () => {
           <Link to={"/account-option"}>Account Option</Link>
         </Menu.Item>
         <Menu.Item
+        onClick={handleSignOut}
           leftSection={
             <Logout
               size="20"

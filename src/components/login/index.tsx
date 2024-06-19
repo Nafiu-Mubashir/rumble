@@ -33,7 +33,9 @@ const Login = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log('Sign in values', values);
-      alert(JSON.stringify(values, null, 2));
+      localStorage.setItem('isSignedIn', 'true');
+    window.location.reload();
+      // alert(JSON.stringify(values, null, 2));
     },
   });
 

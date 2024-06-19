@@ -3,17 +3,15 @@ import * as yup from "yup";
 const validationSchema = yup.object().shape({
   email: yup
     .string()
-    .email('Invalid email')
-    .required('Email is required')
+    .required('Email or username is required')
     .test(
-      'email-validity',
-      'Email is not in a valid format',
+      'email-or-username',
+      'Must be a valid email or username',
       function (value) {
-        const { password } = this.parent;
-        if (value && !yup.string().email().isValidSync(value)) {
-          return new yup.ValidationError('Email is not in a valid format', null, 'password');
-        }
-        return true;
+        // Check if the value is either a valid email or a non-empty string (username)
+        const isEmailValid = yup.string().email().isValidSync(value);
+        const isUsernameValid = typeof value === 'string' && value.trim().length > 0;
+        return isEmailValid || isUsernameValid;
       }
     ),
   password: yup
