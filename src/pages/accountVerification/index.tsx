@@ -1,4 +1,3 @@
-import React from "react";
 import NotificationMessage from "../../components/notificationMessage/NotificationMessage";
 
 const RegistrationVerification = () => {
