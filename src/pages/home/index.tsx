@@ -76,7 +76,7 @@ const Home = () => {
   return (
     <div className="container m-auto dark:text-white">
       <div className="fixed container bg-white dark:bg-rumble-dark top-[3.1rem] md:top-[3.5rem] lg:top-[3.5rem] w-full h-[3.75rem] z-10 flex items-center gap-2 px-2">
-        <TabPane activeSection={activeSection} />
+        <TabPane />
       </div>
       <div className="relative inline-block p-2 lg:p-4 w-full mt-10">
         <div className="lg:p-3 space-y-6">

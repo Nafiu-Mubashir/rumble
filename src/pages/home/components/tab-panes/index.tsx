@@ -126,13 +126,11 @@ const TabPane = () => {
             className="h-full"
             key={id}>
             <button
-              className={`bg-gray-100 dark:bg-gray-700 relative w-auto py-2 px-5 flex justify-center rounded-md text-[0.7rem] font-normal hover:bg-gray-400 hover:text-white ${
-                activeSection === link ? "bg-rumble-green text-white" : ""
-              }`}>
-              <Link
-                to={link}
-                smooth={true}
-                offset={-70}>
+              className={`bg-gray-100 dark:bg-gray-700 relative w-auto py-2 px-5 flex justify-center rounded-md text-[0.7rem] font-normal hover:bg-gray-400 hover:text-white 
+              
+              `}
+            >
+              <Link to={link}>
                 {name}
               </Link>
             </button>
