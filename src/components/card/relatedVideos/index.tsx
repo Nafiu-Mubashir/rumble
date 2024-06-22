@@ -54,9 +54,9 @@ const RelatedVideo = ({
                     viewBox="0 0 24 25"
                     fill="white"
                     stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     {" "}
                     <path d="M3 12.7383h7"></path>

@@ -17,6 +17,14 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
   const [input, setInput] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+
+  useEffect(() => {
+    const signInStatus = localStorage.getItem('isSignedIn');
+    setIsSignedIn(signInStatus === 'true');
+  }, []);
+
 
   const showInput = () => {
     setInput(true);
@@ -105,23 +113,23 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
             d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
           />
         </svg>
-        <div className="flex gap-2 items-center hidden">
-          <Login />
-          <a href="/registration">
-            <Button
-              classes="border border-titan-blue dark:hover:bg-gray-700 lg:py-2 hover:bg-gray-100"
-              value="Sign Up"
-            />
-          </a>
-        </div>
-
-        <div className="flex items-center gap-5">
-          <Upload />
-
-          <Notifications />
-
-          <UserProfile />
-        </div>
+        {isSignedIn ? (
+          <div className="flex items-center gap-5 ">
+            <Upload />
+            <Notifications />
+            <UserProfile />
+          </div>
+        ) : (
+          <div className="flex gap-2 items-center ">
+            <Login />
+            <a href="/registration">
+              <Button
+                classes="border border-titan-blue dark:hover:bg-gray-700 lg:py-2 hover:bg-gray-100"
+                value="Sign Up"
+              />
+            </a>
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -36,6 +36,8 @@ import ScheduleVidoes from "./pages/videoModule/scheduleVideo";
 import Syndication from "./pages/videoModule/syndication";
 import WatchHistory from "./pages/watchHistory";
 import WahtchLater from "./pages/watchLater";
+import SuccessfulRegistration from "./pages/successfulRegistration";
+import RegistrationVerification from "./pages/accountVerification";
 
 export const router = createBrowserRouter([
   {
@@ -178,10 +180,33 @@ export const router = createBrowserRouter([
         path: "policy-violation",
         element: <PolicyViolation />,
       },
+      // {
+      //   path: "registration",
+      //   element: <Registration />,
+      // },
+      // {
+      //   path: "registration-verification-success",
+      //   element: <RegistrationVerification />,
+      // },
+      // {
+      //   path: "registration-success",
+      //   element: <SuccessfulRegistration />,
+      // },
       {
         path: "registration",
         element: <Registration />,
+        children: [
+          {
+            path: "registration-verification-success",
+            element: <RegistrationVerification />,
+          },
+          {
+            path: "/registration/registration-success",
+            element: <SuccessfulRegistration />,
+          },
+        ],
       },
+      
     ],
   },
 ]);

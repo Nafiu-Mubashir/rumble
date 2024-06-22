@@ -4,7 +4,7 @@ import SideTab from "../../../components/sideTab";
 
 const ChatMuting = () => {
   return (
-    <div className="p-4 dark:text-white">
+    <div className="p-4 py-8 dark:text-white">
       <Grid
         justify="space-between"
         classNames={{
@@ -16,7 +16,7 @@ const ChatMuting = () => {
             col: "",
           }}
           className="space-y-4">
-          <h1 className="text-xl font-semibold text-titan-blue uppercase">
+          <h1 className="text-xl font-semibold text-titan-blue dark:text-white uppercase">
             MUTED USER
           </h1>
           <form className="flex items-center gap-3">

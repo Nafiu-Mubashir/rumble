@@ -5,9 +5,14 @@ import { Grid } from "@mantine/core";
 import SideTab from "../../../components/sideTab";
 
 const Emotes = () => {
+
+  const dottedDivs = Array.from({ length: 45 }, (_, index) => (
+    <div key={index} className="border-2 border-dotted h-[80px]"></div>
+  ));
+
   return (
-    <div className="p-4 dark:text-white">
-      <h1 className="text-xl font-semibold text-titan-blue uppercase">
+    <div className="p-4 py-8 dark:text-white">
+      <h1 className="text-xl font-semibold text-titan-blue dark:text-white uppercase">
         EMOTES
       </h1>
       <Grid
@@ -33,37 +38,28 @@ const Emotes = () => {
                   <path
                     d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                     stroke="#36454F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M12 8V16"
                     stroke="#36454F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M8 12H16"
                     stroke="#36454F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>
               <div className="grid grid-cols-3 md:grid-cols-7 gap-3 lg:grid-cols-9">
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
-                <div className="border-2 border-dotted h-[80px]"></div>
+              {dottedDivs}
               </div>
             </div>
 

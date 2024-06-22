@@ -12,6 +12,11 @@ export default {
         "titan-blue": "#003366",
         "titan-red": "#EE6464",
         "titan-red-dark": "#EB2626",
+        "titan-gray": "#36454F"
+      },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
     },
   },

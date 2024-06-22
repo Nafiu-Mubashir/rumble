@@ -16,7 +16,7 @@ const Modrators = () => {
             col: "",
           }}
           className="space-y-4">
-          <h1 className="text-xl font-semibold text-titan-blue uppercase">
+          <h1 className="text-xl font-semibold text-titan-blue dark:text-white uppercase">
             MODERATORS
           </h1>
           <form className="flex items-center gap-3">
@@ -24,7 +24,7 @@ const Modrators = () => {
               placeholder="Username"
               classNames={{
                 input:
-                  "border-gray-200 focus:ring-gray-200 dark:text-gray-400 focus:border-gray-200 dark:bg-rumble-content-dark dark:border-gray-700",
+                  "border-gray-200 md:w-[388px] focus:ring-gray-200 dark:text-gray-400 focus:border-gray-200 dark:bg-rumble-content-dark dark:border-gray-700",
               }}
               size="md"
               radius={0}
