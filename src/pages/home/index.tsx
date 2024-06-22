@@ -1,12 +1,8 @@
-import Button from "../../components/button";
-import CreatorCard from "../../components/card/creatorCard";
-import CategoryCard from "../../components/card/categoryCard";
-import VideoCard from "../../components/card/videoCard";
-import { useContext } from "react";
-import { SlideContext } from "../../context/sidebarCtx";
+import { useContext, useEffect, useState } from "react";
+
 import { Divider } from "@mantine/core";
-import TabPane from "./components/tab-panes";
-import v1 from '../../assets/v1.png';
+
+import v1 from "../../assets/v1.png";
 import v2 from "../../assets/v2.png";
 import v3 from "../../assets/v3.png";
 import v4 from "../../assets/v4.png";
@@ -16,14 +12,71 @@ import v7 from "../../assets/v7.png";
 import v8 from "../../assets/v8.png";
 import v9 from "../../assets/v9.png";
 import video from "../../assets/video.png";
+import Button from "../../components/button";
+import CategoryCard from "../../components/card/categoryCard";
+import CreatorCard from "../../components/card/creatorCard";
+import VideoCard from "../../components/card/videoCard";
+import { SlideContext } from "../../context/sidebarCtx";
+import TabPane from "./components/tab-panes";
+
+// import { Element } from "react-scroll";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const Home = () => {
   const { isOpen } = useContext(SlideContext);
+
+  
+
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  const handleScroll = () => {
+    const sections = document.querySelectorAll<HTMLElement>("[id]");
+    let currentSection = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 70; // Adjust for header height
+      const sectionBottom = sectionTop + section.offsetHeight;
+      const scrollPosition = window.pageYOffset;
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        currentSection = section.id;
+      }
+    });
+
+    setActiveSection(currentSection);
+    console.log(activeSection, 'Holla');
+    
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+
   return (
     <div className="container m-auto dark:text-white">
       <div className="fixed container bg-white dark:bg-rumble-dark top-[3.1rem] md:top-[3.5rem] lg:top-[3.5rem] w-full h-[3.75rem] z-10 flex items-center gap-2 px-2">
-        <TabPane />
+        <TabPane activeSection={activeSection} />
       </div>
       <div className="relative inline-block p-2 lg:p-4 w-full mt-10">
         <div className="lg:p-3 space-y-6">
@@ -36,7 +89,9 @@ const Home = () => {
               />
             </div>
 
-            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div
+              className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3"
+              id="">
               <VideoCard videoLink={v1} />
               <VideoCard videoLink={v2} />
               <VideoCard videoLink={v3} />
@@ -84,7 +139,9 @@ const Home = () => {
               />
             </div>
 
-            <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div
+              id="live"
+              className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
               <VideoCard
                 status="live"
                 videoLink={v6}

@@ -7,7 +7,7 @@ import {
 import { RecordCircle } from "iconsax-react";
 import { Link } from "react-router-dom";
 
-import { Divider, Tooltip } from "@mantine/core";
+import { Tooltip } from "@mantine/core";
 
 import news from "../../assets/news.jpeg";
 import user from "../../assets/user.png";
@@ -285,7 +285,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
               ))}
             </div>
           </div>
-          <Divider className="mb-3 dark:border-gray-700" />
+         
 
           <div className="py-3">
             <div
@@ -305,7 +305,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
             </div>
           </div>
 
-          <Divider className="mb-3 dark:border-gray-700" />
+         
 
           <div className="w-full py-3">
             <h4
@@ -374,7 +374,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
             </div>
           </div>
 
-          <Divider className="mb-3 dark:border-gray-700" />
+         
 
           <div className="w-full py-3">
             <h4
