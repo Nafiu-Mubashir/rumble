@@ -1,21 +1,16 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { Carousel } from "@mantine/carousel";
 
 import { SlideContext } from "../../../../context/sidebarCtx";
 
-// import { Link } from "react-scroll";
-
-
-
-
-
-const TabPane = ({ activeSection }: { activeSection: string }) => {
+const TabPane = () => {
   const { isOpen } = useContext(SlideContext);
   const tabPane = [
     {
       link: "-",
-      name: "All",
+      name: 'All',
     },
     {
       link: "/",
@@ -30,7 +25,7 @@ const TabPane = ({ activeSection }: { activeSection: string }) => {
       name: "Gaming",
     },
     {
-      link: "#live",
+      link: "/",
       name: "Live",
     },
     {
@@ -62,20 +57,6 @@ const TabPane = ({ activeSection }: { activeSection: string }) => {
       name: "History",
     },
   ];
-
-  const scrollToSection = (sectionId: string): void => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const sectionTop: number = section.offsetTop - 70; // Adjust for header height
-      window.scrollTo({
-        top: sectionTop,
-        behavior: "smooth",
-      });
-    }
-    console.log(sectionId, activeSection);
-    
-  };
-
   return (
     <div>
       <Carousel
@@ -147,9 +128,13 @@ const TabPane = ({ activeSection }: { activeSection: string }) => {
             <button
               className={`bg-gray-100 dark:bg-gray-700 relative w-auto py-2 px-5 flex justify-center rounded-md text-[0.7rem] font-normal hover:bg-gray-400 hover:text-white ${
                 activeSection === link ? "bg-rumble-green text-white" : ""
-              }`}
-              onClick={() => scrollToSection(link)}>
-              {name}
+              }`}>
+              <Link
+                to={link}
+                smooth={true}
+                offset={-70}>
+                {name}
+              </Link>
             </button>
           </Carousel.Slide>
         ))}

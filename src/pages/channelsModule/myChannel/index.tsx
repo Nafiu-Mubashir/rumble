@@ -4,8 +4,8 @@ import SideTab from "../../../components/sideTab";
 
 const MyChannel = () => {
   return (
-    <div className="p-4 dark:text-white">
-      <h1 className="text-xl font-semibold text-titan-blue uppercase">
+    <div className="p-4 py-8 dark:text-white">
+      <h1 className="text-xl font-semibold text-titan-blue dark:text-white uppercase">
         MY CHANNELS
       </h1>
       <Grid
@@ -51,7 +51,7 @@ const MyChannel = () => {
               </thead>
               <tbody>
                 <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                  <div className="px-4">
+                  <div className="px-4 py-3">
                     You have not created any channels yet.
                   </div>
                   <th

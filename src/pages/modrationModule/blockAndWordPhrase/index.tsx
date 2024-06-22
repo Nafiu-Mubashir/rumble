@@ -15,12 +15,12 @@ const BlockWordPhrase = () => {
           classNames={{
             col: "",
           }}
-          className="space-y-6">
-          <h1 className="text-xl font-semibold text-titan-blue uppercase">
+          className="space-y-6 text-titan-blue dark:text-white">
+          <h1 className="text-xl font-semibold  uppercase leading-[24.2px]">
             BLOCKED WORDS AND PHRASES
           </h1>
           <div className="flex items-center gap-3">
-            <h1 className="text-xl font-semibold text-titan-blue uppercase">
+            <h1 className="text-xl font-semibold uppercase">
               Channels:
             </h1>
             <Select
@@ -49,7 +49,7 @@ const BlockWordPhrase = () => {
                 size="md"
                 classNames={{
                   input:
-                    "border-gray-200 focus:ring-gray-200 dark:text-gray-400 focus:border-gray-200 dark:bg-gray-700 dark:border-gray-700 !h-[300px]",
+                    "border-gray-200 focus:ring-gray-200 dark:text-white focus:border-gray-200 dark:bg-gray-700 dark:border-gray-700 !h-[300px] placeholder:text-titan-blue dark:placeholder:text-white",
                 }}
                 radius={0}
               />

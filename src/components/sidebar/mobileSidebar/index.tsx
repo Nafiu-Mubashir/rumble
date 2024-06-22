@@ -1,5 +1,3 @@
-import { useDisclosure } from "@mantine/hooks";
-import { Drawer } from "@mantine/core";
 import {
   Award,
   Diagram,
@@ -11,12 +9,16 @@ import {
   Sun1,
   Timer1,
 } from "iconsax-react";
+import { Link } from "react-router-dom";
+
+import { Drawer } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+
 import logo from "../../../../public/titan-dark.png";
+import darkLogo from "../../../../public/titan-white.png";
 import news from "../../../assets/news.jpeg";
 import user from "../../../assets/user.png";
 import { useThemeCtx } from "../../../context/themeCtx";
-import darkLogo from "../../../../public/titan-white.png";
-import { Link } from "react-router-dom";
 
 const MobileSidebar = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -95,8 +97,8 @@ const MobileSidebar = () => {
           fill="currentColor">
           {" "}
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M15.8334 6.66666H7.50003C7.03979 6.66666 6.66669 7.03975 6.66669 7.49999V15.8333C6.66669 16.2936 7.03979 16.6667 7.50003 16.6667H15.8334C16.2936 16.6667 16.6667 16.2936 16.6667 15.8333V7.49999C16.6667 7.03975 16.2936 6.66666 15.8334 6.66666ZM7.50003 4.99999C6.11931 4.99999 5.00003 6.11928 5.00003 7.49999V15.8333C5.00003 17.214 6.11931 18.3333 7.50003 18.3333H15.8334C17.2141 18.3333 18.3334 17.214 18.3334 15.8333V7.49999C18.3334 6.11928 17.2141 4.99999 15.8334 4.99999H7.50003Z"
             fill="currentColor"></path>
           <path
@@ -120,19 +122,19 @@ const MobileSidebar = () => {
           fill="none"
           stroke="currentColor">
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M10 5v5l3.333 1.667"></path>
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M2.583 6.25C3.917 3.5 6.75 1.667 10 1.667c4.583 0 8.333 3.75 8.333 8.333s-3.75 8.333-8.333 8.333c-4.347 0-7.945-3.373-8.304-7.631"></path>
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="m1.485 3.026.81 3.73 3.604-.917"></path>
         </svg>
       ),
@@ -148,9 +150,9 @@ const MobileSidebar = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round">
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round">
           {" "}
           <path d="M12 22c5.5228 0 10-4.4772 10-10 0-5.52285-4.4772-10-10-10C6.47715 2 2 6.47715 2 12c0 5.5228 4.47715 10 10 10Z"></path>
           <path d="M12 6v6l4 2"></path>
